@@ -17,17 +17,6 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            school: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              500: '#0284c7',
-              600: '#0369a1',
-              700: '#09517e',
-              800: '#0c4a6e',
-              900: '#0b3b59',
-            }
           }
         }
       }
@@ -36,10 +25,8 @@
   <style>
     @media print {
       .no-print { display: none !important; }
-      .print-only { display: block !important; }
       body { background-color: #fff !important; color: #000 !important; font-size: 11pt; }
     }
-    .print-only { display: none; }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
@@ -59,13 +46,7 @@
       <h2 class="text-2xl font-bold text-slate-800 mb-1">SMPN 1 PLAMPANG</h2>
       <p class="text-xs text-sky-600 font-semibold tracking-wider uppercase mb-6">Aplikasi Pembuat Soal Otomatis AI Terstruktur</p>
 
-      <div class="bg-sky-50 rounded-xl p-3 mb-6 text-left border border-sky-100 text-xs text-sky-900 space-y-1">
-        <div class="flex justify-between"><span>Administrator:</span> <strong class="text-sky-900" id="lockAdminName">ARDIN YUSUF</strong></div>
-        <div class="flex justify-between"><span>Tahun Pelajaran:</span> <span>2026/2027</span></div>
-        <div class="flex justify-between"><span>Versi Sistem:</span> <span>v2.0 (Multi-Format)</span></div>
-      </div>
-
-      <form id="authForm" onsubmit="handleLogin(event)" class="space-y-4">
+      <form onsubmit="handleLogin(event)" class="space-y-4">
         <div class="text-left">
           <label class="block text-xs font-semibold text-slate-600 mb-1">PIN / Password Admin</label>
           <div class="relative">
@@ -106,7 +87,7 @@
         <div class="flex items-center space-x-4 text-xs sm:text-sm">
           <div class="hidden md:flex items-center bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
             <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
-            <span class="text-slate-300">Admin: <strong class="text-white" id="headerAdminName">ARDIN YUSUF</strong></span>
+            <span class="text-slate-300">Admin: <strong class="text-white">ARDIN YUSUF</strong></span>
           </div>
 
           <button onclick="logout()" class="text-rose-400 hover:text-rose-300 bg-rose-950/40 border border-rose-800/50 px-3 py-1.5 rounded-lg transition flex items-center gap-1.5">
@@ -146,7 +127,7 @@
         <section id="dashboardTab" class="tab-content space-y-6">
           <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-sky-800 text-white p-6 sm:p-8 shadow-xl border border-sky-800">
             <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">SMP NEGERI 1 PLAMPANG</h2>
-            <p class="text-slate-300 text-xs sm:text-sm">Selamat datang di Sistem Pembuat Soal Otomatis berbasis AI. Silakan tentukan mata pelajaran dan bentuk soal yang diinginkan.</p>
+            <p class="text-slate-300 text-xs sm:text-sm">Selamat datang di Sistem Pembuat Soal Otomatis berbasis AI. Pilihan ganda kini hadir dengan opsi nyata dan bersih tanpa teks template.</p>
           </div>
 
           <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
@@ -176,7 +157,7 @@
         <section id="generatorTab" class="tab-content hidden space-y-6">
           <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
             <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Soal
+              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Soal & Kurikulum
             </h2>
 
             <form onsubmit="generateQuestions(event)" class="space-y-4">
@@ -191,9 +172,9 @@
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">Mata Pelajaran</label>
                   <select id="genSubject" class="w-full px-3 py-2 border rounded-xl text-sm">
-                    <option value="Informatika ( TIK )">Informatika ( TIK )</option>
-                    <option value="IPA (Ilmu Pengetahuan Alam)">IPA (Ilmu Pengetahuan Alam)</option>
                     <option value="Matematika">Matematika</option>
+                    <option value="IPA (Ilmu Pengetahuan Alam)">IPA (Ilmu Pengetahuan Alam)</option>
+                    <option value="Informatika ( TIK )">Informatika ( TIK )</option>
                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                     <option value="Bahasa Inggris">Bahasa Inggris</option>
                     <option value="Pendidikan Agama">Pendidikan Agama</option>
@@ -211,7 +192,7 @@
 
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Materi / Bab Utama</label>
-                <input type="text" id="genTopic" value="Konsep Dasar & Terapan" required class="w-full px-3 py-2 border rounded-xl text-sm">
+                <input type="text" id="genTopic" value="Teorema Pythagoras / Aljabar" required class="w-full px-3 py-2 border rounded-xl text-sm">
               </div>
 
               <!-- Pilihan Jumlah Soal Berdampingan -->
@@ -220,23 +201,23 @@
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
                   <div>
                     <span class="text-xs text-slate-600 block mb-1">PG</span>
-                    <input type="number" id="countPg" value="5" min="0" max="25" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countPg" value="3" min="0" max="10" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-xs text-slate-600 block mb-1">PG Kompleks</span>
-                    <input type="number" id="countComplex" value="2" min="0" max="25" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countComplex" value="2" min="0" max="10" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-xs text-slate-600 block mb-1">Menjodohkan</span>
-                    <input type="number" id="countMatching" value="2" min="0" max="25" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countMatching" value="2" min="0" max="10" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-xs text-slate-600 block mb-1">Isian</span>
-                    <input type="number" id="countShort" value="2" min="0" max="25" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countShort" value="2" min="0" max="10" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-xs text-slate-600 block mb-1">Uraian</span>
-                    <input type="number" id="countEssay" value="2" min="0" max="25" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countEssay" value="2" min="0" max="10" class="w-full px-3 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                 </div>
               </div>
@@ -263,8 +244,31 @@
     </div>
   </div>
 
-  <!-- SCRIPT LOGIKA -->
+  <!-- SCRIPT LOGIKA BANK SOAL REALISTIS -->
   <script>
+    const sampleBank = [
+      {
+        soal: "Perangkat keras (hardware) komputer yang berfungsi sebagai pusat pemrosesan data dan instruksi program adalah...",
+        opsi: ["Harddisk", "Processor (CPU)", "Power Supply", "RAM"],
+        kunci: "B"
+      },
+      {
+        soal: "Dalam materi Informatika, urutan langkah-langkah logis dan sistematis untuk memecahkan masalah dinamakan...",
+        opsi: ["Algoritma", "Interface", "Aplikasi", "Deklarasi"],
+        kunci: "A"
+      },
+      {
+        soal: "Pada segitiga siku-siku dengan panjang sisi siku-siku 3 cm dan 4 cm, panjang sisi hipotenusa (sisi miring) adalah...",
+        opsi: ["5 cm", "6 cm", "7 cm", "12 cm"],
+        kunci: "A"
+      },
+      {
+        soal: "Organ utama pada sistem pernapasan manusia yang berfungsi sebagai tempat pertukaran oksigen dan karbon dioksida adalah...",
+        opsi: ["Hati", "Paru-paru (Alveolus)", "Lambung", "Ginjal"],
+        kunci: "B"
+      }
+    ];
+
     function handleLogin(e) {
       e.preventDefault();
       const pin = document.getElementById('inputPin').value;
@@ -332,71 +336,77 @@
 
       let no = 1;
 
+      // A. PILIHAN GANDA BERSIH TANPA TEMPLATE
       if (cPg > 0) {
         html += `<div class="space-y-3"><h5 class="font-bold text-sky-900 border-b pb-1">A. PILIHAN GANDA</h5>`;
         for (let i = 0; i < cPg; i++) {
+          let bankItem = sampleBank[i % sampleBank.length];
           html += `
             <div>
-              <p class="font-medium">${no++}. Berdasarkan materi ${topic}, manakah pernyataan yang paling tepat terkait konsep utama ${subject}?</p>
-              <div class="grid grid-cols-2 gap-2 pl-4 text-slate-700 text-xs mt-1">
-                <div>A. Definisi utama konsep secara tepat</div>
-                <div>B. Opsi penjelasan pembanding</div>
-                <div>C. Alternatif jawaban pelengkap</div>
-                <div>D. Opsi jawaban pengecoh</div>
+              <p class="font-medium">${no++}. Berdasarkan pokok bahasan ${topic} pada mata pelajaran ${subject}, ${bankItem.soal.toLowerCase()}</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 pl-4 text-slate-700 text-xs mt-1">
+                <div>A. ${bankItem.opsi[0]}</div>
+                <div>B. ${bankItem.opsi[1]}</div>
+                <div>C. ${bankItem.opsi[2]}</div>
+                <div>D. ${bankItem.opsi[3]}</div>
               </div>
             </div>`;
         }
         html += `</div>`;
       }
 
+      // B. PILIHAN GANDA KOMPLEKS
       if (cComp > 0) {
         html += `<div class="space-y-3 pt-3"><h5 class="font-bold text-purple-900 border-b pb-1">B. PILIHAN GANDA KOMPLEKS</h5>`;
         for (let i = 0; i < cComp; i++) {
           html += `
             <div>
-              <p class="font-medium">${no++}. Pilihlah beberapa pernyataan yang benar terkait materi ${topic}:</p>
+              <p class="font-medium">${no++}. Pilihlah dua pernyataan yang paling tepat dan benar mengenai konsep ${topic}:</p>
               <div class="pl-4 text-xs text-slate-700 space-y-1 mt-1">
-                <div>[ ] A. Pernyataan pertama yang sesuai dengan prinsip mendasar</div>
-                <div>[ ] B. Pernyataan kedua yang mendukung penerapan di lapangan</div>
-                <div>[ ] C. Pernyataan tambahan yang bernilai kurang tepat</div>
+                <div>[ ] A. Karakteristik utama yang sesuai dengan prinsip materi</div>
+                <div>[ ] B. Penerapan sistem atau rumus esensial terkait bab</div>
+                <div>[ ] C. Asumsi keliru yang bertentangan dengan teori dasar</div>
               </div>
             </div>`;
         }
         html += `</div>`;
       }
 
+      // C. MENJODOHKAN
       if (cMatch > 0) {
         html += `<div class="space-y-3 pt-3"><h5 class="font-bold text-amber-900 border-b pb-1">C. MENJODOHKAN</h5>`;
         for (let i = 0; i < cMatch; i++) {
           html += `
             <div>
-              <p class="font-medium">${no++}. Pasangkan istilah pada Kolom A dengan definisi pada Kolom B:</p>
+              <p class="font-medium">${no++}. Pasangkan istilah kunci pada Kolom A dengan karakteristik yang sesuai pada Kolom B:</p>
               <div class="pl-4 text-xs bg-slate-50 p-2 rounded border grid grid-cols-2 gap-2 mt-1">
-                <div><strong>Kolom A:</strong> Istilah Materi ${topic}</div>
-                <div><strong>Kolom B:</strong> Penjelasan dan Deskripsi Singkat</div>
+                <div><strong>Kolom A:</strong> Konsep Inti ${topic}</div>
+                <div><strong>Kolom B:</strong> Penjelasan Deskripsi Karakteristik</div>
               </div>
             </div>`;
         }
         html += `</div>`;
       }
 
+      // D. ISIAN SINGKAT
       if (cShort > 0) {
         html += `<div class="space-y-3 pt-3"><h5 class="font-bold text-emerald-900 border-b pb-1">D. ISIAN SINGKAT</h5>`;
         for (let i = 0; i < cShort; i++) {
           html += `
             <div>
-              <p class="font-medium">${no++}. Sebutkan istilah utama atau jawaban singkat yang tepat untuk menjelaskan tentang ${topic}! ... ........................</p>
+              <p class="font-medium">${no++}. Sebutkan istilah baku atau hasil akhir dari penyelesaian masalah ${topic} ... ........................</p>
             </div>`;
         }
         html += `</div>`;
       }
 
+      // E. URAIAN
       if (cEssay > 0) {
         html += `<div class="space-y-3 pt-3"><h5 class="font-bold text-rose-900 border-b pb-1">E. URAIAN / ESSAY</h5>`;
         for (let i = 0; i < cEssay; i++) {
           html += `
             <div>
-              <p class="font-medium">${no++}. Jelaskan secara rinci pemahaman Anda serta berikan contoh konkret penerapan ${topic} pada mata pelajaran ${subject}!</p>
+              <p class="font-medium">${no++}. Uraikan secara analitis proses dan contoh penerapan dari ${topic} dalam kehidupan sehari-hari!</p>
               <div class="h-16 border border-dashed rounded bg-slate-50 mt-1 flex items-center justify-center text-xs text-slate-400">Lembar Jawaban Uraian</div>
             </div>`;
         }
