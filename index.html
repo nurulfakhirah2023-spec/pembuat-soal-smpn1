@@ -135,8 +135,8 @@
           </nav>
 
           <div class="mt-6 p-3 bg-slate-50 rounded-xl border text-xs text-slate-600 space-y-1">
-            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Soal Ujian Profesional</div>
-            <p class="text-[11px] text-slate-500">Format soal kini langsung spesifik menyerupai naskah ujian sekolah sungguhan.</p>
+            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Format Profesional</div>
+            <p class="text-[11px] text-slate-500">Dilengkapi tombol unduh Word (.doc) dan pembersihan teks berulang.</p>
           </div>
         </div>
       </aside>
@@ -148,10 +148,9 @@
         <section id="dashboardTab" class="tab-content space-y-6">
           <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-sky-800 text-white p-6 sm:p-8 shadow-xl border border-sky-800">
             <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">SMP NEGERI 1 PLAMPANG</h2>
-            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Otomatis Berbasis AI untuk Guru Profesional. Menghasilkan naskah ujian lengkap beserta kunci jawaban secara instan.</p>
+            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Otomatis Berbasis AI untuk Guru Profesional. Naskah ujian kini bersih tanpa kalimat berulang dan mendukung ekspor Word (.doc).</p>
           </div>
 
-          <!-- Quick Stats Grid -->
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="bg-white p-5 rounded-2xl border shadow-sm flex items-center justify-between">
               <div>
@@ -303,16 +302,22 @@
 
           <!-- HASIL GENERATOR SOAL UJIAN SUNGGUHAN -->
           <div id="genResult" class="hidden bg-white p-8 rounded-2xl border border-slate-200 space-y-6 shadow-sm">
-            <div class="flex justify-between items-center border-b pb-4 no-print">
+            <div class="flex flex-wrap justify-between items-center border-b pb-4 gap-2 no-print">
               <h3 class="font-bold text-lg text-slate-800">Pratinjau Naskah Soal Ujian</h3>
-              <div class="flex gap-2">
-                <button onclick="saveCurrentPackage()" class="px-3 py-2 bg-emerald-600 text-white rounded-lg text-xs font-semibold">Simpan Paket</button>
-                <button onclick="window.print()" class="px-4 py-2 bg-slate-800 text-white rounded-lg text-xs font-semibold">
+              <div class="flex flex-wrap gap-2">
+                <button onclick="saveCurrentPackage()" class="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition">
+                  <i class="fa-solid fa-floppy-disk mr-1"></i> Simpan Paket
+                </button>
+                <button onclick="exportWord()" class="px-3 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-xs font-semibold transition">
+                  <i class="fa-solid fa-file-word mr-1"></i> Download Word (.doc)
+                </button>
+                <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-semibold transition">
                   <i class="fa-solid fa-print mr-1.5"></i> Cetak / Simpan PDF
                 </button>
               </div>
             </div>
-            <div id="previewContainer" class="space-y-6 text-sm"></div>
+            <!-- Area Dokumen yang Akan Diexport/Cetak -->
+            <div id="document-content" class="space-y-6 text-sm bg-white p-4"></div>
           </div>
         </section>
 
@@ -342,7 +347,7 @@
     </div>
   </div>
 
-  <!-- SCRIPT LOGIKA SOAL UJIAN SUNGGUHAN & KUNCI JAWABAN -->
+  <!-- SCRIPT LOGIKA UTAMA -->
   <script>
     let savedPackages = JSON.parse(localStorage.getItem('edusoal_packages') || '[]');
     let currentGeneratedData = null;
@@ -476,7 +481,7 @@
       `;
 
       let kunciHtml = `
-        <div class="page-break mt-8 pt-6 border-t-2 border-dashed border-slate-400">
+        <div class="mt-8 pt-6 border-t-2 border-dashed border-slate-400">
           <h4 class="font-extrabold text-base text-center uppercase text-sky-900 mb-4">KUNCI JAWABAN & PEDOMAN PENSKORAN</h4>
           <div class="space-y-3 text-xs">
       `;
@@ -484,7 +489,7 @@
       let no = 1;
       let kunciNo = 1;
 
-      // 1. PG
+      // 1. PG BERSIH TANPA KATA BERULANG
       if (cPg > 0) {
         html += `<div class="space-y-3"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">A. Pilihan Ganda</h5>`;
         kunciHtml += `<div class="font-bold text-slate-800">A. Kunci Pilihan Ganda:</div><div class="grid grid-cols-5 gap-2 pb-2">`;
@@ -539,7 +544,7 @@
           let item = bank.matching[i % bank.matching.length];
           html += `
             <div class="space-y-1 pl-2">
-              <p class="font-medium">${no++}. Pasangkan pernyataan berikut dengan opsi yang sesuai pada materi ${topic}:</p>
+              <p class="font-medium">${no++}. Pasangkan pernyataan berikut dengan opsi yang sesuai mengenai ${topic}:</p>
               <div class="pl-4 text-xs bg-slate-50 p-2.5 rounded border grid grid-cols-2 gap-4">
                 <div><strong>Kolom A:</strong><br>1. ${item.pairA}</div>
                 <div><strong>Kolom B:</strong><br>A. ${item.pairB}</div>
@@ -587,8 +592,22 @@
       }
 
       kunciHtml += `</div></div>`;
-      document.getElementById('previewContainer').innerHTML = html + kunciHtml;
+      document.getElementById('document-content').innerHTML = html + kunciHtml;
       document.getElementById('genResult').classList.remove('hidden');
+    }
+
+    function exportWord() {
+      const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Naskah Soal Ujian</title></head><body>";
+      const footer = "</body></html>";
+      const htmlContent = header + document.getElementById('document-content').innerHTML + footer;
+      const blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Naskah_Soal_${document.getElementById('genSubject').value}.doc`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
 
     function saveCurrentPackage() {
