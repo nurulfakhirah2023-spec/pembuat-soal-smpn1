@@ -105,10 +105,10 @@
       </div>
     </header>
 
-    <!-- KONTEN UTAMA & SIDEBAR -->
+    <!-- KONTEN UTAMA & SIDEBAR LENGKAP -->
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row gap-6">
 
-      <!-- SIDEBAR -->
+      <!-- SIDEBAR LENGKAP -->
       <aside class="w-full md:w-64 flex-shrink-0 no-print">
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sticky top-22">
           <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Menu Utama</div>
@@ -135,6 +135,11 @@
               <span>Pengaturan & API</span>
             </button>
           </nav>
+
+          <div class="mt-6 p-3 bg-slate-50 rounded-xl border text-xs text-slate-600 space-y-1">
+            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Format Profesional</div>
+            <p class="text-[11px] text-slate-500">Dilengkapi fitur ekspor naskah soal dan tabel kisi-kisi asesmen terpisah.</p>
+          </div>
         </div>
       </aside>
 
@@ -145,7 +150,7 @@
         <section id="dashboardTab" class="tab-content space-y-6">
           <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-sky-800 text-white p-6 sm:p-8 shadow-xl border border-sky-800">
             <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">SMP NEGERI 1 PLAMPANG</h2>
-            <p class="text-slate-300 text-xs sm:text-sm">Sistem Asesmen Sekolah: Generator Soal, Kisi-Kisi Asesmen, dan Kunci Jawaban Terpisah Berbasis AI.</p>
+            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Otomatis Berbasis AI untuk Guru Profesional. Menghasilkan naskah ujian, kisi-kisi, dan kunci jawaban secara instan.</p>
           </div>
 
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -171,19 +176,19 @@
             </div>
             <div class="bg-white p-5 rounded-2xl border shadow-sm flex items-center justify-between">
               <div>
-                <p class="text-xs font-medium text-slate-500">Ekspor Dokumen</p>
-                <h3 class="text-2xl font-extrabold text-slate-800 mt-1">Word & PDF</h3>
-                <span class="text-[10px] text-purple-600 font-medium">Siap Cetak</span>
+                <p class="text-xs font-medium text-slate-500">Mata Pelajaran</p>
+                <h3 class="text-2xl font-extrabold text-slate-800 mt-1">12+</h3>
+                <span class="text-[10px] text-purple-600 font-medium">Kurikulum Nasional</span>
               </div>
               <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl">
-                <i class="fa-solid fa-file-word"></i>
+                <i class="fa-solid fa-book-bookmark"></i>
               </div>
             </div>
             <div class="bg-white p-5 rounded-2xl border shadow-sm flex items-center justify-between">
               <div>
                 <p class="text-xs font-medium text-slate-500">Status Sistem</p>
                 <h3 class="text-base font-bold text-slate-800 mt-1">Normal / Aktif</h3>
-                <span class="text-[10px] text-emerald-600 font-medium">Ready</span>
+                <span class="text-[10px] text-emerald-600 font-medium">Ready to Use</span>
               </div>
               <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl">
                 <i class="fa-solid fa-brain"></i>
@@ -195,7 +200,7 @@
             <div class="flex items-center justify-between mb-4">
               <div>
                 <h3 class="font-bold text-slate-800 text-base">Pilihan Mata Pelajaran Cepat</h3>
-                <p class="text-xs text-slate-500">Klik mapel di bawah untuk menyusun soal.</p>
+                <p class="text-xs text-slate-500">Klik mapel di bawah untuk langsung menuju form generator.</p>
               </div>
               <button onclick="switchTab('generatorTab')" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-semibold transition">
                 Buka Generator
@@ -226,7 +231,7 @@
         <section id="generatorTab" class="tab-content hidden space-y-6">
           <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
             <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Naskah Soal & Kisi-Kisi
+              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Soal Ujian
             </h2>
 
             <form onsubmit="generateQuestions(event)" class="space-y-4">
@@ -264,7 +269,7 @@
                 <input type="text" id="genTopic" value="Teorema Pythagoras" required class="w-full px-3 py-2 border rounded-xl text-sm font-semibold text-sky-900">
               </div>
 
-              <!-- Pilihan Jumlah Soal -->
+              <!-- Pilihan Jumlah Soal Berdampingan -->
               <div class="bg-slate-50 p-4 rounded-xl border space-y-2">
                 <label class="text-xs font-bold text-slate-800 uppercase">Jumlah Butir Soal per Format</label>
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
@@ -292,7 +297,7 @@
               </div>
 
               <button type="submit" class="w-full py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Soal, Kisi-Kisi & Kunci Terpisah
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Naskah Soal Ujian & Kunci Jawaban
               </button>
             </form>
           </div>
@@ -300,22 +305,27 @@
           <!-- HASIL GENERATOR SOAL UJIAN -->
           <div id="genResult" class="hidden bg-white p-8 rounded-2xl border border-slate-200 space-y-6 shadow-sm">
             <div class="flex flex-wrap justify-between items-center border-b pb-4 gap-2 no-print">
-              <h3 class="font-bold text-lg text-slate-800">Pratinjau Hasil Dokumen Asesmen</h3>
+              <h3 class="font-bold text-lg text-slate-800">Pratinjau Naskah Soal Ujian</h3>
               <div class="flex flex-wrap gap-2">
-                <button onclick="saveCurrentPackage()" class="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition">
-                  <i class="fa-solid fa-floppy-disk mr-1"></i> Simpan Paket
+                <button onclick="saveCurrentPackage()" class="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1">
+                  <i class="fa-solid fa-floppy-disk"></i> Simpan Paket
                 </button>
-                <button onclick="exportWord()" class="px-3 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-xs font-semibold transition">
-                  <i class="fa-solid fa-file-word mr-1"></i> Download Word (.doc)
+                <button onclick="exportWord()" class="px-3 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1">
+                  <i class="fa-solid fa-file-word"></i> Download Word (.doc)
                 </button>
-                <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-semibold transition">
-                  <i class="fa-solid fa-print mr-1.5"></i> Cetak / Simpan PDF
+                <button onclick="exportKisiKisiWord()" class="px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1">
+                  <i class="fa-solid fa-table"></i> Download Kisi-Kisi (.doc)
+                </button>
+                <button onclick="window.print()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1.5">
+                  <i class="fa-solid fa-print"></i> Cetak / Simpan PDF
                 </button>
               </div>
             </div>
-
-            <!-- Area Isi Dokumen Utama -->
+            
+            <!-- Area Dokumen Naskah Soal Utama -->
             <div id="document-content" class="space-y-6 text-sm bg-white p-4"></div>
+            <!-- Container Tersembunyi Khusus Ekspor Kisi-Kisi -->
+            <div id="kisi-kisi-content" class="hidden"></div>
           </div>
         </section>
 
@@ -364,7 +374,7 @@
           { q: "Manakah di bawah ini yang termasuk pasangan bilangan tripel Pythagoras?", opts: ["(3, 4, 5)", "(6, 8, 10)", "(7, 8, 10)", "(8, 15, 18)"], ans: "A dan B", ind: "Peserta didik dapat memilih kombinasi tripel Pythagoras yang valid." }
         ],
         matching: [
-          { pairA: "Sisi terpanjang pada segitiga siku-siku", pairB: "Hipotenusa", ind: "Peserta didik dapat menjodohkan istilah istilah penting dalam segitiga siku-siku." },
+          { pairA: "Sisi terpanjang pada segitiga siku-siku", pairB: "Hipotenusa", ind: "Peserta didik dapat menjodohkan istilah dalam segitiga siku-siku." },
           { pairA: "Hasil kuadrat dari 15", pairB: "225", ind: "Peserta didik dapat menjodohkan nilai kuadrat dasar." }
         ],
         short: [
@@ -372,7 +382,7 @@
           { q: "Tripel Pythagoras dari 9, 40, dan ... adalah benar.", ans: "41", ind: "Peserta didik dapat melengkapi bilangan tripel Pythagoras." }
         ],
         essay: [
-          { q: "Jelaskan bagaimana rumus Teorema Pythagoras diturunkan pada sebuah bidang datar segitiga siku-siku!", ans: "Berdasarkan prinsip luas persegi yang dibentuk pada setiap sisi segitiga siku-siku.", ind: "Peserta didik dapat menguraikan konsep pembuktian teorema Pythagoras." },
+          { q: "Jelaskan bagaimana rumus Teorema Pythagoras diturunkan pada sebuah bidang datar segitiga siku-siku!", ans: "Berdasarkan prinsip luas persegi pada setiap sisi segitiga siku-siku.", ind: "Peserta didik dapat menguraikan konsep pembuktian teorema Pythagoras." },
           { q: "Sebuah kapal berlayar ke arah timur sejauh 90 km, kemudian ke utara sejauh 120 km. Hitunglah jarak terdekat kapal sekarang dari posisi awal!", ans: "150 km", ind: "Peserta didik dapat menguraikan penyelesaian masalah pelayaran kapal." }
         ]
       },
@@ -380,9 +390,9 @@
         pg: [
           { q: "Unit struktural dan fungsional terkecil yang menyusun tubuh makhluk hidup disebut...", opts: ["Jaringan", "Organ", "Sel", "Sistem Organ"], ans: "C", ind: "Peserta didik dapat mengidentifikasi hirarki organisasi kehidupan terkecil." },
           { q: "Organel sel tumbuhan yang berfungsi sebagai tempat berlangsungnya fotosintesis adalah...", opts: ["Mitokondria", "Kloroplas", "Ribosom", "Vakuola"], ans: "B", ind: "Peserta didik dapat menyebutkan fungsi organel kloroplas." },
-          { q: "Bagian dari sel hewan dan tumbuhan yang berfungsi mengatur seluruh aktivitas sel adalah...", opts: ["Nukleus", "Sitoplasma", "Membran sel", "Dinding sel"], ans: "A", ind: "Peserta didik dapat mengidentifikasi peranan inti sel (nukleus)." },
+          { q: "Bagian dari sel hewan dan tumbuhan yang berfungsi mengatur seluruh aktivitas sel adalah...", opts: ["Nukleus", "Sitoplasma", "Membran sel", "Dinding sel"], ans: "A", ind: "Peserta didik dapat mengidentifikasi peranan inti sel." },
           { q: "Suhu tubuh normal manusia sehat jika diukur menggunakan termometer Celsius adalah sekitar...", opts: ["32 derajat C", "37 derajat C", "40 derajat C", "42 derajat C"], ans: "B", ind: "Peserta didik dapat mendeskripsikan suhu normal tubuh." },
-          { q: "Perubahan wujud zat padat langsung menjadi gas dinamakan...", opts: ["Mencair", "Membeku", "Menyublim", "Menguap"], ans: "C", ind: "Peserta didik dapat mengidentifikasi istilah perubahan wujud zat menyublim." }
+          { q: "Perubahan wujud zat padat langsung menjadi gas dinamakan...", opts: ["Mencair", "Membeku", "Menyublim", "Menguap"], ans: "C", ind: "Peserta didik dapat mengidentifikasi peristiwa menyublim." }
         ],
         complex: [
           { q: "Pilihlah dua organel yang hanya dapat ditemukan pada sel tumbuhan:", opts: ["Dinding sel", "Kloroplas", "Membran sel", "Mitokondria"], ans: "A dan B", ind: "Peserta didik dapat membandingkan struktur spesifik sel tumbuhan." },
@@ -390,15 +400,15 @@
         ],
         matching: [
           { pairA: "Pusat pengendali sel", pairB: "Nukleus", ind: "Peserta didik dapat menjodohkan bagian sel dan peranannya." },
-          { pairA: "Alat pernapasan tumbuhan", pairB: "Stomata", ind: "Peserta didik dapat menjodohkan bagian organ tumbuhan." }
+          { pairA: "Alat pernapasan tumbuhan", pairB: "Stomata", ind: "Peserta didik dapat menjodohkan organ tumbuhan." }
         ],
         short: [
           { q: "Pewaris sifat makhluk hidup di dalam inti sel dibawa oleh benang-benang ... .", ans: "Kromosom", ind: "Peserta didik dapat mengisi materi pembawa sifat turunan." },
           { q: "Satuan Internasional untuk besaran pokok massa adalah ... .", ans: "Kilogram (kg)", ind: "Peserta didik dapat menyebutkan SI besaran massa." }
         ],
         essay: [
-          { q: "Sebutkan 3 perbedaan utama antara struktur sel hewan dan sel tumbuhan!", ans: "Dinding sel, kloroplas, dan ukuran vakuola.", ind: "Peserta didik dapat menganalisis perbedaan struktur sel hewan dan tumbuhan." },
-          { q: "Jelaskan proses terjadinya fotosintesis pada tumbuhan hijau serta zat apa saja yang dihasilkan!", ans: "Memerlukan air, CO2, dan cahaya matahari untuk menghasilkan glukosa dan oksigen.", ind: "Peserta didik dapat menguraikan reaksi fotosintesis." }
+          { q: "Sebutkan 3 perbedaan utama antara struktur sel hewan dan sel tumbuhan!", ans: "Dinding sel, kloroplas, dan ukuran vakuola.", ind: "Peserta didik dapat menganalisis perbedaan struktur sel." },
+          { q: "Jelaskan proses terjadinya fotosintesis pada tumbuhan hijau serta zat apa saja yang dihasilkan!", ans: "Memerlukan air, CO2, dan cahaya matahari untuk menghasilkan glukosa dan O2.", ind: "Peserta didik dapat menguraikan reaksi fotosintesis." }
         ]
       }
     };
@@ -464,7 +474,7 @@
         counts: { pg: cPg, complex: cComp, matching: cMatch, short: cShort, essay: cEssay }
       };
 
-      // 1. KOP NASKAH UTAMA SOAL
+      // 1. NASKAH UTAMA SOAL
       let html = `
         <div class="border-b-2 border-slate-800 pb-4 mb-6 text-center space-y-1">
           <h4 class="font-extrabold text-sm uppercase tracking-wider">PEMERINTAH KABUPATEN SUMBAWA</h4>
@@ -497,7 +507,7 @@
                 <div>D. ${item.opts[3]}</div>
               </div>
             </div>`;
-          gridKisiRows += `<tr><td class="border p-1.5 text-center">${no}</td><td class="border p-1.5">Pilihan Ganda</td><td class="border p-1.5">${item.ind}</td><td class="border p-1.5 text-center">${item.ans}</td></tr>`;
+          gridKisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">Pilihan Ganda</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.ans}</td></tr>`;
           no++;
         }
         html += `</div>`;
@@ -518,7 +528,7 @@
                 <div>[ &nbsp; ] D. ${item.opts[3]}</div>
               </div>
             </div>`;
-          gridKisiRows += `<tr><td class="border p-1.5 text-center">${no}</td><td class="border p-1.5">PG Kompleks</td><td class="border p-1.5">${item.ind}</td><td class="border p-1.5 text-center">${item.ans}</td></tr>`;
+          gridKisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">PG Kompleks</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.ans}</td></tr>`;
           no++;
         }
         html += `</div>`;
@@ -537,7 +547,7 @@
                 <div><strong>Kolom B:</strong><br>A. ${item.pairB}</div>
               </div>
             </div>`;
-          gridKisiRows += `<tr><td class="border p-1.5 text-center">${no}</td><td class="border p-1.5">Menjodohkan</td><td class="border p-1.5">${item.ind}</td><td class="border p-1.5 text-center">1 - A</td></tr>`;
+          gridKisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">Menjodohkan</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">1 - A</td></tr>`;
           no++;
         }
         html += `</div>`;
@@ -552,7 +562,7 @@
             <div class="space-y-1 pl-2">
               <p class="font-medium">${no}. ${item.q} ................................................................</p>
             </div>`;
-          gridKisiRows += `<tr><td class="border p-1.5 text-center">${no}</td><td class="border p-1.5">Isian Singkat</td><td class="border p-1.5">${item.ind}</td><td class="border p-1.5 text-center">${item.ans}</td></tr>`;
+          gridKisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">Isian Singkat</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.ans}</td></tr>`;
           no++;
         }
         html += `</div>`;
@@ -560,7 +570,7 @@
 
       // E. URAIAN
       if (cEssay > 0) {
-        html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-rose-900 border-b pb-1 uppercase tracking-wide">E. URAIAN / ESSAY</h5>`;
+        html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-rose-900 border-b pb-1 uppercase tracking-wide">E. Uraian / Essay</h5>`;
         for (let i = 0; i < cEssay; i++) {
           let item = bank.essay[i % bank.essay.length];
           html += `
@@ -568,36 +578,13 @@
               <p class="font-medium">${no}. ${item.q}</p>
               <div class="h-20 border border-dashed rounded bg-slate-50 mt-1 flex items-center justify-center text-xs text-slate-400">Lembar Jawaban Uraian</div>
             </div>`;
-          gridKisiRows += `<tr><td class="border p-1.5 text-center">${no}</td><td class="border p-1.5">Uraian / Essay</td><td class="border p-1.5">${item.ind}</td><td class="border p-1.5 text-center">Rubrik Terlampir</td></tr>`;
+          gridKisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">Uraian / Essay</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">Rubrik Terlampir</td></tr>`;
           no++;
         }
         html += `</div>`;
       }
 
-      // 2. KISI-KISI SOAL TERPISAH (HALAMAN BARU)
-      let kisiKisiHtml = `
-        <div class="page-break pt-8 border-t-2 border-slate-400 mt-8">
-          <div class="text-center mb-4">
-            <h4 class="font-extrabold text-base uppercase text-sky-900">KISI-KISI ASESMEN / BLUEPRINT MATRIX</h4>
-            <p class="text-xs text-slate-600">SMP NEGERI 1 PLAMPANG - TAHUN PELAJARAN 2026/2027</p>
-          </div>
-          <table class="w-full text-xs border-collapse border border-slate-300">
-            <thead>
-              <tr class="bg-sky-100 text-sky-900">
-                <th class="border p-2 w-12">No</th>
-                <th class="border p-2 w-32">Bentuk Soal</th>
-                <th class="border p-2">Indikator Soal</th>
-                <th class="border p-2 w-28">Kunci / Target</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${gridKisiRows}
-            </tbody>
-          </table>
-        </div>
-      `;
-
-      // 3. KUNCI JAWABAN TERPISAH (HALAMAN BARU)
+      // KUNCI JAWABAN TERPISAH
       let kunciTerpisahHtml = `
         <div class="page-break pt-8 border-t-2 border-slate-400 mt-8">
           <div class="text-center mb-4">
@@ -621,19 +608,61 @@
         </div>
       `;
 
-      document.getElementById('document-content').innerHTML = html + kisiKisiHtml + kunciTerpisahHtml;
+      // STRUKTUR MATRIKS KISI-KISI UNTUK EKSPOR KHUSUS
+      let kisiKisiDocumentHtml = `
+        <div style="font-family:Arial,sans-serif;padding:20px;">
+          <div style="text-align:center;margin-bottom:20px;border-bottom:2px solid #000;padding-bottom:10px;">
+            <h3 style="margin:0;font-size:14pt;text-transform:uppercase;">PEMERINTAH KABUPATEN SUMBAWA</h3>
+            <h2 style="margin:2px 0;font-size:16pt;text-transform:uppercase;color:#0369a1;">SMP NEGERI 1 PLAMPANG</h2>
+            <h4 style="margin:5px 0 0 0;font-size:12pt;text-transform:uppercase;">MATRIKS KISI-KISI ASESMEN (BLUEPRINT MATRIX)</h4>
+            <p style="margin:5px 0 0 0;font-size:10pt;">Mata Pelajaran: ${subject} | Kelas: ${grade} | Materi Pokok: ${topic}</p>
+          </div>
+          <table style="width:100%;border-collapse:collapse;font-size:10pt;">
+            <thead>
+              <tr style="background-color:#e0f2fe;color:#0369a1;">
+                <th style="border:1px solid #000;padding:8px;width:8%;">No</th>
+                <th style="border:1px solid #000;padding:8px;width:22%;">Bentuk Soal</th>
+                <th style="border:1px solid #000;padding:8px;">Indikator Soal</th>
+                <th style="border:1px solid #000;padding:8px;width:20%;">Kunci / Target</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${gridKisiRows}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      document.getElementById('document-content').innerHTML = html + kunciTerpisahHtml;
+      document.getElementById('kisi-kisi-content').innerHTML = kisiKisiDocumentHtml;
       document.getElementById('genResult').classList.remove('hidden');
     }
 
+    // EXPORT DOKUMEN NASKAH SOAL UTAMA
     function exportWord() {
-      const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Naskah Soal & Kisi-Kisi Ujian</title><style>body{font-family:Arial,sans-serif;font-size:11pt;} table{border-collapse:collapse;width:100%;} th,td{border:1px solid #000;padding:5px;} .page-break{page-break-before:always;}</style></head><body>";
+      const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Naskah Soal Ujian</title><style>body{font-family:Arial,sans-serif;font-size:11pt;} table{border-collapse:collapse;width:100%;} th,td{border:1px solid #000;padding:5px;} .page-break{page-break-before:always;}</style></head><body>";
       const footer = "</body></html>";
       const htmlContent = header + document.getElementById('document-content').innerHTML + footer;
       const blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `Naskah_Soal_KisiKisi_${document.getElementById('genSubject').value}.doc`;
+      a.download = `Naskah_Soal_${document.getElementById('genSubject').value}.doc`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    // EXPORT DOKUMEN MATRIKS KISI-KISI KHUSUS
+    function exportKisiKisiWord() {
+      const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Kisi-Kisi Asesmen</title></head><body>";
+      const footer = "</body></html>";
+      const htmlContent = header + document.getElementById('kisi-kisi-content').innerHTML + footer;
+      const blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `KisiKisi_Asesmen_${document.getElementById('genSubject').value}.doc`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
