@@ -105,10 +105,10 @@
       </div>
     </header>
 
-    <!-- KONTEN UTAMA & SIDEBAR LENGKAP -->
+    <!-- KONTEN UTAMA & SIDEBAR -->
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row gap-6">
 
-      <!-- SIDEBAR LENGKAP -->
+      <!-- SIDEBAR -->
       <aside class="w-full md:w-64 flex-shrink-0 no-print">
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sticky top-22">
           <div class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Menu Utama</div>
@@ -137,8 +137,8 @@
           </nav>
 
           <div class="mt-6 p-3 bg-slate-50 rounded-xl border text-xs text-slate-600 space-y-1">
-            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Batas Soal Diperluas</div>
-            <p class="text-[11px] text-slate-500">Jumlah input soal bercerita kini dapat diatur lebih dari 5 butir tanpa duplikasi.</p>
+            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Soal Variatif & Kontekstual</div>
+            <p class="text-[11px] text-slate-500">Redaksi PG, PG Kompleks, dan Soal Bercerita dibuat berbeda dan realistis sesuai mata pelajaran.</p>
           </div>
         </div>
       </aside>
@@ -150,7 +150,7 @@
         <section id="dashboardTab" class="tab-content space-y-6">
           <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-sky-800 text-white p-6 sm:p-8 shadow-xl border border-sky-800">
             <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">SMP NEGERI 1 PLAMPANG</h2>
-            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Terintegrasi SD-SMP dengan variasi wacana cerita kontekstual tanpa batas dan matriks kisi-kisi resmi Kurikulum Merdeka.</p>
+            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Terintegrasi SD-SMP dengan variasi wacana cerita unik, pembedaan PG & PG Kompleks yang presisi, serta kisi-kisi Kurikulum Merdeka.</p>
           </div>
 
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -168,7 +168,7 @@
               <div>
                 <p class="text-xs font-medium text-slate-500">Format Soal</p>
                 <h3 class="text-2xl font-extrabold text-slate-800 mt-1">6 Jenis</h3>
-                <span class="text-[10px] text-amber-600 font-medium">Bebas Atur Jumlah</span>
+                <span class="text-[10px] text-amber-600 font-medium">Redaksi Unik</span>
               </div>
               <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl">
                 <i class="fa-solid fa-layer-group"></i>
@@ -231,7 +231,7 @@
         <section id="generatorTab" class="tab-content hidden space-y-6">
           <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
             <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Soal Ujian (Integrasi SD & SMP)
+              <i class="fa-solid fa-sliders text-sky-600"></i> Konfigurasi Penyusunan Soal Ujian
             </h2>
 
             <form onsubmit="generateQuestions(event)" class="space-y-4">
@@ -249,9 +249,9 @@
                     <option value="Matematika">Matematika (SD - SMP)</option>
                     <option value="IPA (Ilmu Pengetahuan Alam)">IPA / IPAS (SD - SMP)</option>
                     <option value="Informatika ( TIK )">Informatika / Keterampilan TIK</option>
-                    <option value="Bahasa Indonesia">Bahasa Indonesia (Literasi Dasar - Lanjutan)</option>
-                    <option value="Bahasa Inggris">Bahasa Inggris (Elementary - Intermediate)</option>
-                    <option value="Ilmu Pengetahuan Sosial (IPS)">Ilmu Pengetahuan Sosial (IPS)</option>
+                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                    <option value="Bahasa Inggris">Bahasa Inggris</option>
+                    <option value="Ilmu Pengetahuan Sosial (IPS)">IPS</option>
                     <option value="PPKn">PPKn / Pancasila</option>
                     <option value="Pendidikan Agama">Pendidikan Agama</option>
                   </select>
@@ -259,7 +259,7 @@
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">Kelas / Semester</label>
                   <select id="genGrade" class="w-full px-3 py-2 border rounded-xl text-sm">
-                    <option value="Kelas VI / SD (Transisi)">Kelas VI / SD (Fase C - Transisi)</option>
+                    <option value="Kelas VI / SD (Transisi)">Kelas VI / SD (Fase C)</option>
                     <option value="Kelas VII / Ganjil">Kelas VII / SMP (Fase D)</option>
                     <option value="Kelas VIII / Ganjil">Kelas VIII / SMP (Fase D)</option>
                     <option value="Kelas IX / Ganjil">Kelas IX / SMP (Fase D)</option>
@@ -274,16 +274,16 @@
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">KD / CP / TP</label>
-                  <input type="text" id="genCpTp" value="Menganalisis informasi dan memecahkan masalah kontekstual terpadu" required class="w-full px-3 py-2 border rounded-xl text-sm">
+                  <input type="text" id="genCpTp" value="Menganalisis informasi kontekstual dan pemecahan masalah" required class="w-full px-3 py-2 border rounded-xl text-sm">
                 </div>
               </div>
 
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Materi Spesifik</label>
-                <input type="text" id="genTopic" value="Penerapan Konsep Terpadu SD-SMP" required class="w-full px-3 py-2 border rounded-xl text-sm">
+                <input type="text" id="genTopic" value="Penerapan Konsep Terpadu" required class="w-full px-3 py-2 border rounded-xl text-sm">
               </div>
 
-              <!-- Pilihan Jumlah Soal Berdampingan (Maksimal Soal Bercerita Ditingkatkan ke 15) -->
+              <!-- Pilihan Jumlah Soal -->
               <div class="bg-slate-50 p-4 rounded-xl border space-y-2">
                 <label class="text-xs font-bold text-slate-800 uppercase">Jumlah Butir Soal per Format</label>
                 <div class="grid grid-cols-2 sm:grid-cols-6 gap-2">
@@ -293,7 +293,7 @@
                   </div>
                   <div>
                     <span class="text-[11px] text-slate-600 block mb-1">PG Kompleks</span>
-                    <input type="number" id="countComplex" value="1" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countComplex" value="2" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-[11px] text-slate-600 block mb-1">Menjodohkan</span>
@@ -340,9 +340,7 @@
               </div>
             </div>
             
-            <!-- Area Dokumen Naskah Soal Utama -->
             <div id="document-content" class="space-y-6 text-sm bg-white p-4"></div>
-            <!-- Container Tersembunyi Khusus Ekspor Kisi-Kisi -->
             <div id="kisi-kisi-content" class="hidden"></div>
           </div>
         </section>
@@ -378,318 +376,250 @@
     let savedPackages = JSON.parse(localStorage.getItem('edusoal_packages') || '[]');
     let currentGeneratedData = null;
 
-    // BANK SOAL LENGKAP INTEGRASI SD & SMP DENGAN KOLEKSI BERCERITA KAYA & UNIK
+    // BANK SOAL TERDIFERENSIASI LENGKAP MAPEL SD & SMP
     const soalBankMapel = {
       "Matematika": {
         pg: [
-          { q: "Hasil dari operasi hitung campuran: 125 + 25 × 4 - 50 adalah...", opts: ["150", "175", "200", "225"], ans: "B", ind: "Peserta didik dapat menghitung operasi campuran bilangan bulat.", weight: "1" },
-          { q: "Kelipatan Persekutuan Terkecil (KPK) dari 24 dan 36 adalah...", opts: ["48", "72", "96", "108"], ans: "B", ind: "Peserta didik dapat menentukan KPK dua bilangan.", weight: "1" }
+          { q: "Hasil dari 1.250 + 750 : 25 - 150 adalah...", opts: ["1.130", "1.130", "1.130", "1.130"].map((v, i) => [1130, 1140, 1150, 1160][i].toString()), ans: "A", ind: "Menghitung operasi campuran bilangan bulat.", weight: "1" },
+          { q: "KPK dari 18, 24, dan 36 adalah...", opts: ["36", "54", "72", "144"], ans: "C", ind: "Menentukan KPK tiga bilangan.", weight: "1" },
+          { q: "Sebuah segitiga siku-siku memiliki alas 9 cm dan tinggi 12 cm. Panjang sisi miringnya adalah...", opts: ["13 cm", "15 cm", "17 cm", "21 cm"], ans: "B", ind: "Menghitung Teorema Pythagoras.", weight: "1" }
         ],
         complex: [
-          { q: "Pilihlah dua pernyataan yang benar mengenai sifat-sifat Teorema Pythagoras:", opts: ["Berlaku untuk semua jenis segitiga", "Hanya berlaku pada segitiga siku-siku", "Kuadrat sisi miring sama dengan jumlah kuadrat sisi siku-siku", "Sisi miring selalu merupakan sisi terpendek"], ans: "B dan C", ind: "Peserta didik dapat menganalisis Teorema Pythagoras.", weight: "2" }
+          { q: "Manakah dua pernyataan berikut yang benar mengenai bilangan prima?", opts: ["Semua bilangan ganjil adalah bilangan prima", "2 adalah satu-satunya bilangan prima genap", "Bilangan prima hanya memiliki 2 faktor pembagi", "Bilangan 1 termasuk bilangan prima"], ans: "B dan C", ind: "Menganalisis sifat-sifat bilangan prima.", weight: "2" },
+          { q: "Pilihlah dua sifat yang berlaku pada bangun datar Belah Ketupat:", opts: ["Keempat sisinya sama panjang", "Kedua diagonalnya berpotongan tegak lurus", "Memiliki 4 sudut siku-siku", "Kedua diagonalnya sama panjang"], ans: "A dan B", ind: "Menganalisis sifat bangun datar geometri.", weight: "2" }
         ],
         matching: [
-          { pairA: "Sisi terpanjang pada segitiga siku-siku", pairB: "Hipotenusa", ind: "Peserta didik dapat menjodohkan istilah matematika.", weight: "2" }
+          { pairA: "Sudut yang besarnya antara 0° dan 90°", pairB: "Sudut Lancip", ind: "Menjodohkan jenis sudut.", weight: "2" }
         ],
         short: [
-          { q: "Bentuk pecahan biasa paling sederhana dari 0,75 adalah ... .", ans: "3/4", ind: "Peserta didik dapat mengubah bentuk pecahan.", weight: "2" }
+          { q: "Bentuk sederhana dari pecahan 24/36 adalah ... .", ans: "2/3", ind: "Menyederhanakan pecahan.", weight: "2" }
         ],
         essay: [
-          { q: "Ibu membeli 3 1/2 kg beras, lalu membeli lagi 2 1/4 kg. Jika beras dimasak 1 3/4 kg, berapa kg sisa beras Ibu?", ans: "4 kg", ind: "Peserta didik dapat menyelesaikan operasi pecahan.", weight: "5" }
+          { q: "Pak Roni membeli 4 karung beras yang masing-masing berisi 25 kg. Jika beras tersebut dikemas kembali dalam kantong plastik berukuran 2,5 kg, berapa banyak kantong plastik yang dibutuhkan?", ans: "40 kantong", ind: "Menyelesaikan masalah operasi pembagian.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Pak Budi merancang atap rumah berbentuk segitiga siku-siku. Tinggi tiang puncak atap dari balok penyangga adalah 3 meter, sedangkan setengah lebar alas rumah adalah 4 meter.",
-            q: "Berapa panjang kayu kasau (sisi miring atap) yang harus disiapkan oleh Pak Budi untuk satu sisi?",
+            stimulus: "Pak Budi merancang konstruksi atap rumah berbentuk segitiga siku-siku di Plampang. Tinggi tiang puncak atap adalah 3 meter dan setengah lebar alasnya adalah 4 meter.",
+            q: "Berapakah panjang kayu kasau (sisi miring atap) yang harus dipotong untuk satu sisi atap tersebut?",
             opts: ["5 meter", "6 meter", "7 meter", "12 meter"],
             ans: "A",
-            ind: "Peserta didik dapat menyelesaikan soal bercerita berbasis penerapan Pythagoras.",
+            ind: "Menghitung panjang sisi miring aplikasi Pythagoras.",
             weight: "3"
           },
           {
-            stimulus: "Siti menabung di celengan setiap hari sejak hari Senin. Hari Senin ia memasukkan Rp5.000, hari Selasa Rp7.000, hari Rabu Rp9.000, dan seterusnya dengan pola penambahan tetap tiap hari.",
-            q: "Berapa jumlah uang yang ditabung Siti khusus pada hari Jumat dalam pekan yang sama?",
-            opts: ["Rp11.000", "Rp13.000", "Rp15.000", "Rp17.000"],
+            stimulus: "Siti menabung harian di celengan. Hari Senin ia menabung Rp5.000, Selasa Rp7.000, Rabu Rp9.000, dan seterusnya dengan selisih tetap setiap hari.",
+            q: "Berapakah jumlah uang yang ditabung Siti khusus pada hari Sabtu pekan tersebut?",
+            opts: ["Rp13.000", "Rp15.000", "Rp17.000", "Rp19.000"],
+            ans: "C",
+            ind: "Menentukan suku ke-n deret aritmatika.",
+            weight: "3"
+          },
+          {
+            stimulus: "Toko Busana Plampang memberikan diskon sebesar 25% untuk pembelian tas sekolah. Harga label awal tas tersebut adalah Rp200.000.",
+            q: "Berapa total uang yang harus dibayarkan pembeli setelah dipotong diskon?",
+            opts: ["Rp140.000", "Rp150.000", "Rp160.000", "Rp175.000"],
             ans: "B",
-            ind: "Peserta didik dapat menganalisis pola bilangan aritmatika sederhana.",
-            weight: "3"
-          },
-          {
-            stimulus: "Sebuah toko kelontong di Plampang memberikan diskon 20% untuk setiap pembelian seragam sekolah. Budi membeli seragam seharga Rp150.000 sebelum diskon.",
-            q: "Berapa rupiah total uang yang harus dibayar oleh Budi setelah mendapatkan diskon?",
-            opts: ["Rp120.000", "Rp130.000", "Rp135.000", "Rp140.000"],
-            ans: "A",
-            ind: "Peserta didik dapat menghitung persentase diskon dalam transaksi ekonomi.",
-            weight: "3"
-          },
-          {
-            stimulus: "Denah kebun sayur sekolah berbentuk persegi panjang digambar dengan skala 1 : 200. Pada denah tersebut, panjang kebun adalah 5 cm dan lebarnya 3 cm.",
-            q: "Berapakah luas kebun sayur sekolah yang sebenarnya?",
-            opts: ["30 m²", "60 m²", "600 m²", "100 m²"],
-            ans: "A",
-            ind: "Peserta didik dapat menghitung luas sebenarnya berdasarkan skala denah.",
+            ind: "Menghitung persentase nilai potongan harga.",
             weight: "3"
           }
         ]
       },
       "IPA (Ilmu Pengetahuan Alam)": {
         pg: [
-          { q: "Unit struktural dan fungsional terkecil penyusun tubuh makhluk hidup adalah...", opts: ["Jaringan", "Organ", "Sel", "Sistem Organ"], ans: "C", ind: "Peserta didik mengidentifikasi unit sel.", weight: "1" },
-          { q: "Peristiwa perubahan wujud zat dari cair menjadi gas disebut...", opts: ["Mencair", "Membeku", "Menguap", "Mengembun"], ans: "C", ind: "Peserta didik mengidentifikasi perubahan wujud.", weight: "1" }
+          { q: "Organel sel yang berfungsi sebagai tempat terjadinya respirasi seluler dan penghasil energi adalah...", opts: ["Lisosom", "Mitokondria", "Ribosom", "Badan Golgi"], ans: "B", ind: "Mengidentifikasi fungsi organel sel.", weight: "1" },
+          { q: "Perubahan wujud zat dari padat langsung menjadi gas tanpa melalui fase cair disebut...", opts: ["Menguap", "Mencair", "Menyublim", "Mengristal"], ans: "C", ind: "Mengidentifikasi perubahan wujud zat.", weight: "1" }
         ],
         complex: [
-          { q: "Pilihlah dua organel yang hanya ditemukan pada sel tumbuhan:", opts: ["Dinding sel", "Kloroplas", "Membran sel", "Mitokondria"], ans: "A dan B", ind: "Peserta didik membandingkan organel sel.", weight: "2" }
+          { q: "Pilihlah dua organel sel yang hanya dapat ditemukan pada sel tumbuhan:", opts: ["Dinding Sel", "Kloroplas", "Sentriol", "Membran Plasma"], ans: "A dan B", ind: "Membandingkan struktur sel tumbuhan dan hewan.", weight: "2" },
+          { q: "Manakah dua contoh peristiwa perubahan kimia dalam kehidupan sehari-hari?", opts: ["Besi berkarat", "Nasi menjadi basi", "Es batu mencair", "Gula larut dalam air"], ans: "A dan B", ind: "Membedakan perubahan fisika dan kimia.", weight: "2" }
         ],
         matching: [
-          { pairA: "Pusat pengendali seluruh aktivitas sel", pairB: "Nukleus", ind: "Peserta didik menjodohkan organel sel.", weight: "2" }
+          { pairA: "Zat hijau daun tempat fotosintesis", pairB: "Klorofil", ind: "Menjodohkan komponen fotosintesis.", weight: "2" }
         ],
         short: [
-          { q: "Alat pernapasan utama pada tumbuhan yang terletak di bagian bawah daun adalah ... .", ans: "Stomata", ind: "Peserta didik menyebutkan alat respirasi tumbuhan.", weight: "2" }
+          { q: "Proses penguapan air dari permukaan daun tumbuhan disebut ... .", ans: "Transpirasi", ind: "Menyebutkan istilah siklus air.", weight: "2" }
         ],
         essay: [
-          { q: "Jelaskan perbedaan antara ekosistem darat alami dan ekosistem buatan!", ans: "Alami terbentuk sendiri tanpa campur tangan manusia (hutan), buatan dibuat manusia (waduk/sawah).", ind: "Peserta didik membedakan ekosistem.", weight: "5" }
+          { q: "Jelaskan rantai makanan yang terjadi pada ekosistem sawah dan peran masing-masing organisme!", ans: "Padi (Produsen) -> Belalang (Konsumen I) -> Katak (Konsumen II) -> Ular (Konsumen III) -> Jamur (Pengurai).", ind: "Menguraikan komponen rantai makanan.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Siswa kelas VI mengamati perkecambahan biji kacang hijau di laboratorium. Gelas A diletakkan di dekat jendela yang terkena sinar matahari, sedangkan gelas B diletakkan di dalam lemari gelap.",
-            q: "Setelah 5 hari, tanaman di gelas B tumbuh sangat cepat namun berbatang pucat kurus (etiolasi). Faktor lingkungan apakah yang mempengaruhinya?",
-            opts: ["Kadar air dan pupuk", "Intensitas cahaya matahari", "Jenis media tanam", "Suhu ruangan"],
+            stimulus: "Siswa kelas VI mengamati perkecambahan biji kacang hijau. Gelas A diletakkan di area terang terkena matahari, sedangkan Gelas B disimpan di dalam almari gelap.",
+            q: "Setelah 5 hari, tanaman pada Gelas B tumbuh jauh lebih tinggi tetapi berbatang pucat kurus. Fenomena pertumbuhan tersebut dinamakan...",
+            opts: ["Fototropisme positif", "Etiolasi akibat kurang cahaya", "Gigantisme sel", "Klorosis jaringan daun"],
             ans: "B",
-            ind: "Peserta didik menganalisis pengaruh cahaya terhadap pertumbuhan.",
+            ind: "Menganalisis dampak cahaya terhadap pertumbuhan.",
             weight: "3"
           },
           {
-            stimulus: "Di dekat pabrik tahu, air sungai mendadak keruh berbau tak sedap dan banyak ikan kecil mengapung mati karena kekurangan oksigen terlarut.",
-            q: "Berdasarkan kasus tersebut, jenis pencemaran apakah yang terjadi dan apa dampak utamanya?",
-            opts: ["Pencemaran udara yang memicu hujan asam", "Pencemaran air limbah yang merusak ekosistem akuatik", "Pencemaran suara mesin", "Pencemaran sampah plastik"],
+            stimulus: "Sungai dekat kawasan pemukiman mendadak dipenuhi busa putih dan berbau menyengat akibat pembuangan limbah detergen rumahtangga.",
+            q: "Apakah dampak biologis paling utama bagi populasi ikan di sungai tersebut?",
+            opts: ["Jumlah ikan meningkat cepat", "Kadar oksigen terlarut berkurang drastis sehingga ikan mati", "Ikan bertambah besar", "Air sungai menjadi jernih kembali"],
             ans: "B",
-            ind: "Peserta didik mengevaluasi dampak pencemaran lingkungan.",
-            weight: "3"
-          },
-          {
-            stimulus: "Seorang petani memelihara burung hantu di area persawahan miliknya untuk menekan populasi hama tikus yang merusak tanaman padi menjelang panen.",
-            q: "Berdasarkan rantai makanan di sawah, peran burung hantu dalam cerita tersebut adalah sebagai...",
-            opts: ["Produsen utama", "Konsumen tingkat II (predator)", "Pengurai (dekomposer)", "Hama pemakan bulir padi"],
-            ans: "B",
-            ind: "Peserta didik mengidentifikasi peran makhluk hidup dalam rantai makanan.",
+            ind: "Mengevaluasi dampak pencemaran air.",
             weight: "3"
           }
         ]
       },
       "Informatika ( TIK )": {
         pg: [
-          { q: "Perangkat keras (hardware) yang berfungsi sebagai otak pemroses data komputer adalah...", opts: ["RAM", "CPU / Processor", "Harddisk", "Power Supply"], ans: "B", ind: "Peserta didik mengidentifikasi hardware komputer.", weight: "1" }
+          { q: "Komponen fisik komputer yang berfungsi mengolah dan memproses seluruh instruksi data adalah...", opts: ["Harddisk", "CPU / Processor", "Monitor", "Power Supply"], ans: "B", ind: "Mengidentifikasi hardware pemroses.", weight: "1" }
         ],
         complex: [
-          { q: "Manakah yang termasuk contoh perangkat masukan (input device)?", opts: ["Keyboard", "Mouse", "Monitor", "Printer"], ans: "A dan B", ind: "Peserta didik membedakan perangkat input.", weight: "2" }
+          { q: "Manakah dua contoh Perangkat Masukan (Input Device) pada komputer?", opts: ["Keyboard", "Mouse", "Printer", "Speaker"], ans: "A dan B", ind: "Mengidentifikasi perangkat input.", weight: "2" },
+          { q: "Pilihlah dua contoh software yang tergolong dalam Sistem Operasi (Operating System):", opts: ["Microsoft Windows", "Linux", "Microsoft Word", "Google Chrome"], ans: "A dan B", ind: "Membedakan sistem operasi dan aplikasi.", weight: "2" }
         ],
         matching: [
-          { pairA: "Media penyimpanan memori sementara", pairB: "RAM", ind: "Peserta didik menjodohkan komponen komputer.", weight: "2" }
+          { pairA: "Memori acak bersifat sementara (volatile)", pairB: "RAM", ind: "Menjodohkan jenis memori.", weight: "2" }
         ],
         short: [
-          { q: "Program perangkat lunak yang mengatur seluruh kerja sistem komputer disebut ... .", ans: "Sistem Operasi", ind: "Peserta didik melengkapi istilah software.", weight: "2" }
+          { q: "Singkatan dari URL dalam alamat situs web internet adalah Uniform Resource ... .", ans: "Locator", ind: "Melengkapi kepanjangan istilah TIK.", weight: "2" }
         ],
         essay: [
-          { q: "Jelaskan pentingnya menjaga kerahasiaan kata sandi (password) di internet!", ans: "Mencegah peretasan akun, pencurian identitas, dan penyalahgunaan data pribadi.", ind: "Peserta didik menjelaskan keamanan digital.", weight: "5" }
+          { q: "Jelaskan langkah-langkah penting untuk menjaga keamanan akun media sosial dari peretasan!", ans: "Menggunakan kata sandi kuat, mengaktifkan Otentikasi Dua Faktor (2FA), dan tidak mengklik link phishing.", ind: "Menguraikan strategi keamanan digital.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Andi menerima pesan dari nomor tak dikenal yang mengabarkan ia memenangkan uang 50 juta rupiah. Andi diminta mengklik tautan (link) dan memasukkan sandi akun miliknya.",
-            q: "Tindakan bijak apakah yang harus dilakukan Andi agar terhindar dari modus penipuan online (phishing)?",
-            opts: ["Segera mengklik tautan tersebut", "Mengabaikan dan menghapus pesan tersebut", "Membagikan pesan ke media sosial", "Meminta transfer biaya administrasi"],
+            stimulus: "Budi menerima pesan WhatsApp berisi pengumuman undian berhadiah dengan menyertakan file bernama 'Surat_Pemenang.apk'.",
+            q: "Tindakan paling aman yang wajib dilakukan Budi untuk mencegah peretasan HP adalah...",
+            opts: ["Membuka file APK tersebut", "Mengabaikan dan langsung menghapus pesan tanpa menginstal file APK", "Meneruskan ke teman", "Mengisi data rekening"],
             ans: "B",
-            ind: "Peserta didik menerapkan literasi keamanan digital.",
-            weight: "3"
-          },
-          {
-            stimulus: "Rina ingin mengirimkan berkas dokumen tugas berupa file PDF kepada gurunya via email. Namun ukuran file tersebut mencapai 50 MB sehingga gagal terkirim.",
-            q: "Langkah teknis paling tepat yang harus dilakukan Rina agar berkas dokumen tersebut bisa dikirim via internet adalah...",
-            opts: ["Mengubah file PDF menjadi file foto", "Kompresi ukuran file atau mengunggah ke cloud storage lalu bagikan tautannya", "Menghapus komputer Rina", "Mencetak dokumen di kertas lalu difoto ulang"],
-            ans: "B",
-            ind: "Peserta didik menyelesaikan masalah pengiriman dokumen digital.",
+            ind: "Menerapkan literasi bahaya Malware/Malicious APK.",
             weight: "3"
           }
         ]
       },
       "Bahasa Indonesia": {
         pg: [
-          { q: "Bagian struktur teks laporan hasil observasi yang berisi pengenalan umum objek adalah...", opts: ["Deskripsi bagian", "Pernyataan umum", "Simpulan", "Koda"], ans: "B", ind: "Peserta didik mengidentifikasi struktur laporan.", weight: "1" }
+          { q: "Bagian awal struktur teks Laporan Hasil Observasi yang berisi definisi umum objek adalah...", opts: ["Deskripsi Bagian", "Pernyataan Umum", "Simpulan", "Koda"], ans: "B", ind: "Mengidentifikasi struktur teks observasi.", weight: "1" }
         ],
         complex: [
-          { q: "Pilihlah dua ciri kebahasaan yang lazim ditemukan dalam teks deskripsi:", opts: ["Menggunakan panca indra untuk mendeskripsikan objek", "Menggunakan kata penggambaran konkret", "Menggunakan rumus angka matematis", "Menggunakan dialog langsung"], ans: "A dan B", ind: "Peserta didik mengenali kaidah kebahasaan teks.", weight: "2" }
+          { q: "Pilihlah dua ciri utama bahasa yang digunakan dalam Teks Deskripsi:", opts: ["Mengabaikan panca indra", "Melibatkan penginderaan untuk menggambarkan objek", "Menggunakan kata sifat yang spesifik", "Menggunakan bahasa matematis"], ans: "B dan C", ind: "Menganalisis kebahasaan teks deskripsi.", weight: "2" }
         ],
         matching: [
-          { pairA: "Persamaan kata (sinonim)", pairB: "Padanan makna", ind: "Peserta didik menjodohkan istilah bahasa.", weight: "2" }
+          { pairA: "Persamaan kata yang memiliki makna sejenis", pairB: "Sinonim", ind: "Menjodohkan istilah kebahasaan.", weight: "2" }
         ],
         short: [
-          { q: "Gagasan utama yang mendasari pengembangan sebuah paragraf disebut ide ... .", ans: "Pokok", ind: "Peserta didik melengkapi struktur teks.", weight: "2" }
+          { q: "Ide atau gagasan pokok yang menjadi inti bahasan paragraf dinamakan pikiran ... .", ans: "Utama", ind: "Melengkapi istilah struktur paragraf.", weight: "2" }
         ],
         essay: [
-          { q: "Sebutkan dan jelaskan tiga struktur utama dalam teks cerita narasi!", ans: "Orientasi (pengenalan), komplikasi (puncak masalah), dan resolusi (penyelesaian).", ind: "Peserta didik menguraikan struktur narasi.", weight: "5" }
+          { q: "Sebutkan dan jelaskan 3 struktur utama dalam pembentuk Teks Narasi!", ans: "Orientasi (pengenalan), Komplikasi (konflik), dan Resolusi (peleraian).", ind: "Menguraikan struktur naskah narasi.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Pagi itu, suasana di pinggir Sungai Brantas tampak ramai. Warga bergotong royong membersihkan tumpukan sampah plastik yang menyumbat aliran air akibat banjir kemarin sore. Pak RT memimpin langsung kegiatan bakti sosial tersebut.",
-            q: "Berdasarkan wacana di atas, latar tempat dan suasana yang tergambar adalah...",
-            opts: ["Di pegunungan dengan suasana sepi", "Di pinggir Sungai Brantas dengan suasana gotong royong yang aktif", "Di ruang kelas yang tegang", "Di pasar tradisional bising"],
+            stimulus: "Warga desa Plampang bergotong royong membersihkan selokan di sepanjang jalan utama sebelum musim hujan tiba. Pak RT memimpin kerja bakti dengan semangat.",
+            q: "Berdasarkan kutipan teks di atas, latar tempat dan suasana yang tergambar adalah...",
+            opts: ["Di sekolah dengan suasana tegang", "Di sepanjang jalan desa dengan suasana gotong royong", "Di rumah dengan sepi", "Di pasar bising"],
             ans: "B",
-            ind: "Peserta didik menyimpulkan latar cerita pendek.",
-            weight: "3"
-          },
-          {
-            stimulus: "Rani adalah anak yang rajin membaca buku di perpustakaan setiap jam istirahat. Berkat kegemarannya itu, ia sering menjadi rujukan teman-temannya saat ada tugas mengarang cerita.",
-            q: "Sifat tokoh Rani dalam kutipan cerita di atas dapat disimpulkan sebagai anak yang...",
-            opts: ["Pemalas dan sombong", "Rajin dan gemar membaca", "Tertutup dan angkuh", "Dermawan dan pemalu"],
-            ans: "B",
-            ind: "Peserta didik menyimpulkan watak tokoh dalam cerita.",
-            weight: "3"
-          },
-          {
-            stimulus: "Burung Merak jantan melebarkan bulu ekornya yang indah berwarna-warni saat fajar tiba. Gerakannya yang anggun membuat unggas lain di sekitarnya terkagum-kagum memandang pesonanya.",
-            q: "Makna kata 'anggun' pada paragraf deskripsi di atas adalah...",
-            opts: ["Kasar dan cepat", "Cantik, elok, dan berwibawa", "Kecil dan kurus", "Biasa saja"],
-            ans: "B",
-            ind: "Peserta didik mengidentifikasi makna kata dalam teks deskripsi.",
+            ind: "Menentukan latar cerita pendek.",
             weight: "3"
           }
         ]
       },
       "Bahasa Inggris": {
         pg: [
-          { q: "Choose the correct expression to greet someone in the morning:", opts: ["Good afternoon", "Good morning", "Good evening", "Good night"], ans: "B", ind: "Students identify greetings.", weight: "1" }
+          { q: "Choose the correct expression to greet your teacher in the morning:", opts: ["Good night", "Good morning", "Good evening", "Goodbye"], ans: "B", ind: "Identifying morning greetings.", weight: "1" }
         ],
         complex: [
-          { q: "Select two pronouns used for plural subjects:", opts: ["They", "We", "He", "She"], ans: "A and B", ind: "Students identify plural pronouns.", weight: "2" }
+          { q: "Select two pronouns used for plural subjects in English:", opts: ["They", "We", "He", "She"], ans: "A and B", ind: "Identifying plural pronouns.", weight: "2" }
         ],
         matching: [
-          { pairA: "Capital city of Indonesia", pairB: "Jakarta", ind: "Students match general facts.", weight: "2" }
+          { pairA: "Opposite of the word 'Big'", pairB: "Small", ind: "Matching antonyms.", weight: "2" }
         ],
         short: [
-          { q: "The past tense of the verb 'eat' is ... .", ans: "ate", ind: "Students complete past verbs.", weight: "2" }
+          { q: "The past tense form of the verb 'go' is ... .", ans: "went", ind: "Completing past tense verb.", weight: "2" }
         ],
         essay: [
-          { q: "Write a short paragraph about your favorite daily activity!", ans: "Custom student paragraph.", ind: "Students write descriptive text.", weight: "5" }
+          { q: "Write a short self-introduction paragraph (Name, Age, and Hobby)!", ans: "Student custom response.", ind: "Writing a simple introduction.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Yesterday, Sinta went to the local market with her mother. They bought fresh vegetables, apples, and some sugar for baking a cake. Sinta helped her mother carry the heavy basket happily.",
-            q: "Where did Sinta go yesterday according to the story?",
-            opts: ["To the school library", "To the local market", "To the swimming pool", "To the bookstore"],
+            stimulus: "Rani went to the school library during break time. She borrowed a storybook about space exploration and read it quietly under a shade tree.",
+            q: "Where did Rani read her borrowed storybook?",
+            opts: ["Inside the classroom", "Under a shade tree", "At the canteen", "In her house"],
             ans: "B",
-            ind: "Students comprehend explicit details from a text.",
-            weight: "3"
-          },
-          {
-            stimulus: "Budi loves playing football every Sunday morning. He usually practices with his best friends at the school field for two hours.",
-            q: "How often does Budi play football with his friends?",
-            opts: ["Every day", "Every Sunday morning", "Every night", "Once a month"],
-            ans: "B",
-            ind: "Students identify habit information from a paragraph.",
+            ind: "Comprehending reading passage details.",
             weight: "3"
           }
         ]
       },
       "Ilmu Pengetahuan Sosial (IPS)": {
         pg: [
-          { q: "Interaksi keruangan antarwilayah terjadi karena adanya perbedaan...", opts: ["Jumlah penduduk saja", "Potensi sumber daya alam dan kebutuhan", "Waktu dan iklim", "Sistem pemerintahan"], ans: "B", ind: "Peserta didik memahami interaksi keruangan.", weight: "1" }
+          { q: "Faktor utama pendorong terjadinya interaksi keruangan antarwilayah adalah...", opts: ["Perbedaan ketersediaan potensi sumber daya alam", "Kesamaan jumlah penduduk", "Kesamaan bentuk negara", "Perbedaan iklim global"], ans: "A", ind: "Memahami prinsip interaksi keruangan.", weight: "1" }
         ],
         complex: [
-          { q: "Pilih dua contoh bentuk mobilitas sosial horizontal:", opts: ["Pindah tugas jabatan setara ke kota lain", "Promosi jabatan naik pangkat", "Alih profesi dengan status sosial sama", "Turun jabatan karena demosi"], ans: "A dan C", ind: "Peserta didik mengidentifikasi mobilitas sosial.", weight: "2" }
+          { q: "Pilihlah dua contoh bentuk mobilitas sosial vertikal naik (social climbing):", opts: ["Seorang guru biasa diangkat menjadi Kepala Sekolah", "Karyawan swasta dipromosikan jadi Manajer", "Seorang camat pindah tugas ke kecamatan lain dengan jabatan sama", "PNS pensiun"], ans: "A dan B", ind: "Mengidentifikasi jenis mobilitas sosial.", weight: "2" }
         ],
         matching: [
-          { pairA: "Garis bujur 0 derajat terletak di kota", pairB: "Greenwich", ind: "Peserta didik menjodohkan pengetahuan peta.", weight: "2" }
+          { pairA: "Garis khatulistiwa 0 derajat", pairB: "Ekuator", ind: "Menjodohkan konsep pemetaan.", weight: "2" }
         ],
         short: [
-          { q: "Kebutuhan manusia yang paling utama untuk bertahan hidup disebut kebutuhan ... .", ans: "Primer", ind: "Peserta didik melengkapi jenis kebutuhan.", weight: "2" }
+          { q: "Kebutuhan pokok manusia yang harus dipenuhi paling awal dinamakan kebutuhan ... .", ans: "Primer", ind: "Melengkapi jenis kebutuhan.", weight: "2" }
         ],
         essay: [
-          { q: "Jelaskan pengaruh letak geografis Indonesia terhadap kehidupan ekonomi!", ans: "Menjadi jalur perdagangan dunia yang strategis.", ind: "Peserta didik menganalisis letak geografis.", weight: "5" }
+          { q: "Jelaskan keuntungan letak strategis geografis Indonesia di antara dua samudera dan dua benua!", ans: "Menjadi jalur pelayaran perdagangan internasional serta kaya akan akulturasi budaya.", ind: "Menganalisis letak geografis.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Pulau Bali memiliki keindahan alam dan kebudayaan unik, sehingga banyak wisatawan mancanegara berkunjung. Hal ini mendorong penduduk lokal beralih dari petani menjadi pelaku pariwisata.",
-            q: "Berdasarkan ilustrasi, faktor pendorong perubahan mata pencaharian penduduk di Bali disebabkan oleh...",
-            opts: ["Penurunan lahan pertanian", "Perkembangan pariwisata dan interaksi keruangan", "Kebijakan impor beras", "Bencana alam"],
+            stimulus: "Sebagian besar masyarakat pesisir pantai Plampang berprofesi sebagai nelayan, sementara warga dataran tinggi Sembalun bekerja sebagai petani sayur.",
+            q: "Mata pencaharian kedua kelompok masyarakat tersebut berbeda karena dipengaruhi oleh...",
+            opts: ["Tingkat pendidikan masyarakat", "Kondisi geografis dan potensi alam wilayah", "Jumlah partai politik", "Perbedaan bahasa ibu"],
             ans: "B",
-            ind: "Peserta didik menganalisis perubahan sosial akibat potensi wilayah.",
-            weight: "3"
-          },
-          {
-            stimulus: "Masyarakat di daerah pesisir pantai Plampang sebagian besar bekerja sebagai nelayan, sedangkan masyarakat di daerah dataran tinggi Sembalun bekerja sebagai petani sayur.",
-            q: "Perbedaan jenis pekerjaan utama masyarakat kedua wilayah tersebut dipengaruhi oleh faktor...",
-            opts: ["Kondisi geografis dan potensi alam lingkungan setempat", "Tingkat pendidikan formal", "Jumlah suku bangsa", "Jumlah partai politik"],
-            ans: "A",
-            ind: "Peserta didik menganalisis pengaruh kondisi geografis terhadap mata pencaharian.",
+            ind: "Menganalisis pengaruh kondisi geografis terhadap mata pencaharian.",
             weight: "3"
           }
         ]
       },
       "PPKn": {
         pg: [
-          { q: "Dasar negara Republik Indonesia yang tercantum dalam Pembukaan UUD 1945 adalah...", opts: ["Pancasila", "UU No. 1 Tahun 1945", "Bhinneka Tunggal Ika", "Dekrit Presiden"], ans: "A", ind: "Peserta didik mengidentifikasi dasar negara.", weight: "1" }
+          { q: "Dasar negara dan falsafah hidup bangsa Indonesia adalah...", opts: ["UUD 1945", "Pancasila", "Bhinneka Tunggal Ika", "Ketetapan MPR"], ans: "B", ind: "Mengidentifikasi dasar negara.", weight: "1" }
         ],
         complex: [
-          { q: "Pilihlah dua nilai luhur yang terkandung dalam sila ke-3 Pancasila:", opts: ["Persatuan Indonesia", "Cinta tanah air dan bangsa", "Keadilan sosial", "Musyawarah mufakat"], ans: "A dan B", ind: "Peserta didik menguraikan nilai Pancasila.", weight: "2" }
+          { q: "Pilihlah dua contoh wujud pengamalan Sila Kedua Pancasila:", opts: ["Menghormati hak asasi manusia", "Bersikap adil dan tenggang rasa antarsesama", "Mengutamakan musyawarah mufakat", "Mengharuskan agama tunggal"], ans: "A dan B", ind: "Menguraikan pengamalan Pancasila.", weight: "2" }
         ],
         matching: [
-          { pairA: "Semboyan negara Indonesia", pairB: "Bhinneka Tunggal Ika", ind: "Peserta didik menjodohkan simbol negara.", weight: "2" }
+          { pairA: "Semboyan persatuan bangsa Indonesia", pairB: "Bhinneka Tunggal Ika", ind: "Menjodohkan simbol persatuan.", weight: "2" }
         ],
         short: [
-          { q: "Lembaga negara yang memegang kekuasaan membentuk undang-undang adalah ... .", ans: "DPR", ind: "Peserta didik menyebutkan lembaga legislatif.", weight: "2" }
+          { q: "Lembaga negara yang berwenang membuat dan mengesahkan Undang-Undang adalah ... .", ans: "DPR", ind: "Melengkapi fungsi lembaga negara.", weight: "2" }
         ],
         essay: [
-          { q: "Jelaskan makna semboyan 'Bhinneka Tunggal Ika' dalam menjaga keutuhan NKRI!", ans: "Meskipun berbeda suku, agama, dan budaya, bangsa Indonesia tetap satu kesatuan.", ind: "Peserta didik menjelaskan makna semboyan.", weight: "5" }
+          { q: "Jelaskan arti penting prinsip keberagaman Bhinneka Tunggal Ika dalam menjaga keutuhan NKRI!", ans: "Meskipun berbeda suku dan agama, warga tetap bersatu padu dalam kedamaian.", ind: "Menjelaskan makna Bhinneka Tunggal Ika.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Di SMPN 1 Plampang terdapat siswa yang berasal dari berbagai daerah dengan latar belakang suku dan agama berbeda. Mereka tetap belajar kelompok bersama tanpa membeda-bedakan.",
-            q: "Pencerminan sikap positif apakah yang ditunjukkan para siswa tersebut sesuai nilai Pancasila?",
-            opts: ["Menjaga persatuan dan toleransi antarsesama", "Mengutamakan kepentingan kelompok sendiri", "Melanggar tata tertib sekolah", "Bersikap individualis"],
-            ans: "A",
-            ind: "Peserta didik menerapkan nilai Pancasila di sekolah.",
-            weight: "3"
-          },
-          {
-            stimulus: "Dalam rapat pemilihan ketua RT, Pak Ahmad dan Pak Danu memiliki perbedaan pendapat tentang jadwal kerja bakti. Namun setelah dilakukan musyawarah mufakat, keduanya saling menerima hasil keputusan rapat dengan lapang dada.",
-            q: "Sikap saling menghargai pendapat dalam musyawarah tersebut sesuai dengan pengamalan Pancasila sila ke-...",
-            opts: ["Kedua", "Ketiga", "Keempat", "Kelima"],
+            stimulus: "Siswa SMPN 1 Plampang datang dari latar belakang suku Jawa, Sasak, dan Samawa. Mereka saling bekerja sama membersihkan ruang kelas tanpa membedakan asal usul.",
+            q: "Sikap toleransi tersebut merupakan pencerminan pengamalan Pancasila sila ke-...",
+            opts: ["Pertama", "Kedua", "Ketiga", "Kelima"],
             ans: "C",
-            ind: "Peserta didik menganalisis pengamalan Pancasila dalam musyawarah.",
+            ind: "Menerapkan nilai Persatuan Indonesia di sekolah.",
             weight: "3"
           }
         ]
       },
       "Pendidikan Agama": {
         pg: [
-          { q: "Beriman kepada kitab-kitab Allah SWT termasuk rukun iman yang ke-...", opts: ["Pertama", "Kedua", "Ketiga", "Keempat"], ans: "C", ind: "Peserta didik mengidentifikasi rukun iman.", weight: "1" }
+          { q: "Mengimani kitab-kitab suci Allah SWT merupakan rukun iman yang ke-...", opts: ["1", "2", "3", "4"], ans: "C", ind: "Mengidentifikasi urutan rukun iman.", weight: "1" }
         ],
         complex: [
-          { q: "Pilihlah dua sifat wajib bagi rasul Allah SWT:", opts: ["Shiddiq", "Amanah", "Kadzib", "Khianat"], ans: "A dan B", ind: "Peserta didik membedakan sifat wajib rasul.", weight: "2" }
+          { q: "Pilihlah dua Sifat Wajib yang dimiliki oleh Rasul Allah SWT:", opts: ["Shiddiq (Jujur)", "Amanah (Dapat Dipercaya)", "Kadzib (Dusta)", "Khianat"], ans: "A dan B", ind: "Membedakan sifat wajib dan mustahil rasul.", weight: "2" }
         ],
         matching: [
-          { pairA: "Kitab suci yang diturunkan kepada Nabi Isa AS", pairB: "Injil", ind: "Peserta didik menjodohkan kitab dan nabi.", weight: "2" }
+          { pairA: "Kitab suci yang diturunkan kepada Nabi Daud AS", pairB: "Zabur", ind: "Menjodohkan kitab dan nabi.", weight: "2" }
         ],
         short: [
-          { q: "Malaikat yang bertugas mencatat amal baik manusia adalah ... .", ans: "Raqib", ind: "Peserta didik menyebutkan tugas malaikat.", weight: "2" }
+          { q: "Malaikat yang ditugaskan Allah SWT untuk mencatat segala amal kebaikan manusia adalah ... .", ans: "Raqib", ind: "Melengkapi nama malaikat.", weight: "2" }
         ],
         essay: [
-          { q: "Jelaskan pengertian jujur (shiddiq) dan sebutkan manfaatnya dalam kehidupan sehari-hari!", ans: "Jujur adalah kesesuaian perkataan dan perbuatan, manfaatnya mendatangkan kepercayaan dan ketenangan hati.", ind: "Peserta didik menguraikan akhlak mulia.", weight: "5" }
+          { q: "Jelaskan arti sifat Amanah dan berikan contoh perbuatannya di sekolah!", ans: "Amanah artinya dapat dipercaya. Contohnya menjaga dan mengembalikan barang pinjaman perpustakaan tepat waktu.", ind: "Menguraikan nilai akhlakul karimah.", weight: "5" }
         ],
         storyList: [
           { 
-            stimulus: "Ahmad menemukan sebuah dompet berisi uang dan kartu identitas di halaman masjid sekolah. Meskipun tidak ada yang melihat, Ahmad langsung menyerahkannya kepada guru piket.",
-            q: "Sikap terpuji apakah yang ditunjukkan oleh Ahmad dalam cerita di atas?",
-            opts: ["Sifat riya dan sum'ah", "Sifat amanah dan jujur", "Sifat takabur", "Sifat pemarah"],
+            stimulus: "Ahmad menemukan uang Rp50.000 tergeletak di koridor sekolah. Ia tidak menyimpannya sendiri melainkan menyerahkan ke guru piket agar diumumkan.",
+            q: "Perbuatan mulia Ahmad menunjukkan penerapan sifat...",
+            opts: ["Riya", "Jujur dan Amanah", "Takabur", "Fathonah"],
             ans: "B",
-            ind: "Peserta didik menganalisis penerapan akhlakul karimah.",
-            weight: "3"
-          },
-          {
-            stimulus: "Setiap hari Jumat jam istirahat pertama, pengurus ROHIS SMPN 1 Plampang menyisihkan sebagian uang saku mereka untuk dimasukkan ke dalam kotak infak yatim piatu di sekolah.",
-            q: "Perilaku gemar bersedekah tersebut mengajarkan siswa untuk memiliki sifat...",
-            opts: ["Kikir dan hemat berlebihan", "Dermawan dan memiliki kepedulian sosial tinggi", "Riya ingin dipuji teman", "Pemboros"],
-            ans: "B",
-            ind: "Peserta didik mengidentifikasi hikmah kebiasaan bersedekah.",
+            ind: "Menganalisis pengamalan akhlak terpuji.",
             weight: "3"
           }
         ]
@@ -735,6 +665,7 @@
       document.getElementById('genSubject').value = subjectName;
     }
 
+    // LOGIKA GENERATOR UTAMA
     function generateQuestions(e) {
       e.preventDefault();
       const subject = document.getElementById('genSubject').value;
@@ -760,12 +691,11 @@
         counts: { pg: cPg, complex: cComp, matching: cMatch, short: cShort, essay: cEssay, story: cStory }
       };
 
-      // 1. NASKAH UTAMA SOAL
       let html = `
         <div class="border-b-2 border-slate-800 pb-4 mb-6 text-center space-y-1">
           <h4 class="font-extrabold text-sm uppercase tracking-wider">PEMERINTAH KABUPATEN SUMBAWA</h4>
           <h4 class="font-extrabold text-xl uppercase text-sky-900">SMP NEGERI 1 PLAMPANG</h4>
-          <h3 class="font-extrabold text-lg uppercase pt-1">NASKAH SOAL UJIAN SEKOLAH / ASESMEN TERINTEGRASI</h3>
+          <h3 class="font-extrabold text-lg uppercase pt-1">NASKAH SOAL ASESMEN UJIAN TERINTEGRASI</h3>
           <div class="text-xs text-slate-700 pt-3 grid grid-cols-2 text-left max-w-xl mx-auto border-t border-slate-300 mt-2 pt-2 bg-slate-50 p-3 rounded-lg">
             <div>Mata Pelajaran: <strong>${subject}</strong></div>
             <div>Jenjang / Kelas: <strong>${grade}</strong></div>
@@ -779,9 +709,9 @@
       let kunciHtml = `<div class="page-break pt-6 space-y-4"><h4 class="font-bold text-base text-slate-900 border-b pb-2 uppercase">Kunci Jawaban & Rubrik Penilaian</h4>`;
       let no = 1;
 
-      // A. PILIHAN GANDA
+      // A. PILIHAN GANDA (1 Jawaban Benar)
       if (cPg > 0) {
-        html += `<div class="space-y-3"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">A. Pilihan Ganda</h5>`;
+        html += `<div class="space-y-3"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">A. Pilihan Ganda (Pilihlah Satu Jawaban Paling Tepat)</h5>`;
         for (let i = 0; i < cPg; i++) {
           let item = bank.pg[i % bank.pg.length];
           html += `
@@ -801,9 +731,9 @@
         html += `</div>`;
       }
 
-      // B. PG KOMPLEKS
+      // B. PILIHAN GANDA KOMPLEKS (Centang Lebih Dari Satu)
       if (cComp > 0) {
-        html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">B. Pilihan Ganda Kompleks (Pilih Lebih Dari Satu)</h5>`;
+        html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">B. Pilihan Ganda Kompleks (Berilah Tanda Centang [✓] Pada Beberapa Jawaban Yang Benar)</h5>`;
         for (let i = 0; i < cComp; i++) {
           let item = bank.complex[i % bank.complex.length];
           html += `
@@ -817,7 +747,7 @@
               </div>
             </div>`;
           kisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">${theme}</td><td style="border:1px solid #000;padding:6px;">${cpTp}</td><td style="border:1px solid #000;padding:6px;">${topic}</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.weight}</td><td style="border:1px solid #000;padding:6px;text-align:center;">PG Kompleks</td><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td></tr>`;
-          kunciHtml += `<div class="text-xs"><strong>${no}. Kunci: ${item.ans}</strong><br><span class="text-slate-600">Indikator: ${item.ind}</span></div>`;
+          kunciHtml += `<div class="text-xs"><strong>${no}. Kunci PG Kompleks: ${item.ans}</strong><br><span class="text-slate-600">Indikator: ${item.ind}</span></div>`;
           no++;
         }
         html += `</div>`;
@@ -830,14 +760,14 @@
           let item = bank.matching[i % bank.matching.length];
           html += `
             <div class="space-y-1 pl-2">
-              <p class="font-medium">${no}. Jodohkan pernyataan berikut dengan pasangan yang sesuai:</p>
-              <div class="pl-4 text-xs grid grid-cols-2 gap-4">
-                <div><strong>Pertanyaan:</strong> ${item.pairA}</div>
-                <div><strong>Pilihan:</strong> ${item.pairB}</div>
+              <p class="font-medium">${no}. Pasangkan pernyataan di sebelah kiri dengan pilihan jawaban yang tepat di sebelah kanan:</p>
+              <div class="pl-4 text-xs grid grid-cols-2 gap-4 bg-slate-50 p-2 rounded border">
+                <div><strong>Pernyataan:</strong> ${item.pairA}</div>
+                <div><strong>Pasangan Jawaban:</strong> ${item.pairB}</div>
               </div>
             </div>`;
           kisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">${theme}</td><td style="border:1px solid #000;padding:6px;">${cpTp}</td><td style="border:1px solid #000;padding:6px;">${topic}</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.weight}</td><td style="border:1px solid #000;padding:6px;text-align:center;">Menjodohkan</td><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td></tr>`;
-          kunciHtml += `<div class="text-xs"><strong>${no}. Pasangan yang benar:</strong> ${item.pairA} &rarr; ${item.pairB}</div>`;
+          kunciHtml += `<div class="text-xs"><strong>${no}. Pasangan Benar:</strong> ${item.pairA} &rarr; ${item.pairB}</div>`;
           no++;
         }
         html += `</div>`;
@@ -854,13 +784,13 @@
               <div class="pl-4 pt-1"><div class="w-48 border-b border-dashed border-slate-600 h-6"></div></div>
             </div>`;
           kisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">${theme}</td><td style="border:1px solid #000;padding:6px;">${cpTp}</td><td style="border:1px solid #000;padding:6px;">${topic}</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.weight}</td><td style="border:1px solid #000;padding:6px;text-align:center;">Isian Singkat</td><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td></tr>`;
-          kunciHtml += `<div class="text-xs"><strong>${no}. Kunci: ${item.ans}</strong></div>`;
+          kunciHtml += `<div class="text-xs"><strong>${no}. Kunci Isian: ${item.ans}</strong></div>`;
           no++;
         }
         html += `</div>`;
       }
 
-      // E. URAIAN
+      // E. URAIAN / ESSAY
       if (cEssay > 0) {
         html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">E. Soal Uraian / Essay</h5>`;
         for (let i = 0; i < cEssay; i++) {
@@ -868,7 +798,7 @@
           html += `
             <div class="space-y-2 pl-2">
               <p class="font-medium">${no}. ${item.q}</p>
-              <div class="h-20 border border-slate-300 rounded-lg p-2 text-xs text-slate-400">Lembar jawaban uraian...</div>
+              <div class="h-20 border border-slate-300 rounded-lg p-2 text-xs text-slate-400">Lembar jawaban siswa...</div>
             </div>`;
           kisiRows += `<tr><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td><td style="border:1px solid #000;padding:6px;">${theme}</td><td style="border:1px solid #000;padding:6px;">${cpTp}</td><td style="border:1px solid #000;padding:6px;">${topic}</td><td style="border:1px solid #000;padding:6px;">${item.ind}</td><td style="border:1px solid #000;padding:6px;text-align:center;">${item.weight}</td><td style="border:1px solid #000;padding:6px;text-align:center;">Uraian</td><td style="border:1px solid #000;padding:6px;text-align:center;">${no}</td></tr>`;
           kunciHtml += `<div class="text-xs"><strong>${no}. Pedoman Penskoran:</strong> ${item.ans}</div>`;
@@ -877,36 +807,16 @@
         html += `</div>`;
       }
 
-      // F. SOAL BERCERITA DENGAN LOGIKA VARIATOR DINAMIS
+      // F. SOAL BERCERITA (LITERASI STIMULUS MAPEL)
       if (cStory > 0) {
-        html += `<div class="space-y-4 pt-4"><h5 class="font-bold text-amber-900 border-b pb-1 uppercase tracking-wide">F. Soal Bercerita (Literasi & Stimulus Kontekstual)</h5>`;
+        html += `<div class="space-y-4 pt-4"><h5 class="font-bold text-amber-900 border-b pb-1 uppercase tracking-wide">F. Soal Bercerita (Literasi AKM & Stimulus Kontekstual)</h5>`;
         const stories = bank.storyList || [];
         for (let i = 0; i < cStory; i++) {
-          let item;
-          if (i < stories.length) {
-            item = stories[i];
-          } else {
-            const randomValA = (i + 2) * 5;
-            const randomValB = (i + 1) * 10;
-            item = {
-              stimulus: `Pada kegiatan literasi pembelajaran terpadu modul ${i + 1}, kelompok siswa mencatat data observasi lingkungan Plampang. Dari pengukuran awal diperoleh data sebesar ${randomValA} unit dan mengalami peningkatan ${randomValB}% setelah dilakukan penyesuaian lapangan.`,
-              q: `Berdasarkan analisis wacana observasi nomor ${i + 1} di atas, apakah faktor utama yang menyebabkan peningkatan hasil pengukuran tersebut?`,
-              opts: [
-                "Adanya interaksi faktor eksternal dan adaptasi lingkungan yang optimal",
-                "Penurunan kualitas sarana dan prasarana lapangan",
-                "Kesalahan dalam perhitungan instrumen awal",
-                "Tidak ada perubahan kondisi lingkungan sama sekali"
-              ],
-              ans: "A",
-              ind: "Peserta didik dapat menganalisis wacana kontekstual dan menyimpulkan dampaknya.",
-              weight: "3"
-            };
-          }
-
+          let item = stories[i % stories.length];
           html += `
             <div class="space-y-2 pl-2 border-l-4 border-amber-400 bg-amber-50/40 p-3 rounded-r-lg">
-              <div class="text-xs italic text-slate-700 bg-white p-2.5 rounded border border-amber-200">
-                <strong>Teks Stimulus / Cerita Kasus ${i + 1}:</strong><br>${item.stimulus}
+              <div class="text-xs italic text-slate-700 bg-white p-2.5 rounded border border-amber-200 shadow-sm">
+                <strong>Teks Wacana / Stimulus Cerita (${i + 1}):</strong><br>${item.stimulus}
               </div>
               <p class="font-medium text-slate-900">${no}. ${item.q}</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 pl-4 text-slate-700 text-xs">
@@ -926,7 +836,7 @@
       kunciHtml += `</div>`;
       document.getElementById('document-content').innerHTML = html + kunciHtml;
 
-      // 2. TABEL KISI-KISI STANDAR RESMI 2026
+      // TABEL KISI-KISI STANDAR RESMI 2026
       let kisiTableHtml = `
         <div style="font-family:Arial,sans-serif; padding:20px;">
           <h3 style="text-align:center; text-transform:uppercase; font-size:14pt; margin-bottom:5px;">KISI-KISI PENULISAN SOAL ASESMEN TERINTEGRASI 2026</h3>
@@ -956,7 +866,7 @@
       savedPackages.push(currentGeneratedData);
       localStorage.setItem('edusoal_packages', JSON.stringify(savedPackages));
       updateStats();
-      alert('Paket soal berhasil disimpan ke bank soal!');
+      alert('Paket soal berhasil disimpan!');
       renderSavedPackages();
     }
 
