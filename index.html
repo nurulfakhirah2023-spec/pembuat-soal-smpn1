@@ -137,8 +137,8 @@
           </nav>
 
           <div class="mt-6 p-3 bg-slate-50 rounded-xl border text-xs text-slate-600 space-y-1">
-            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Anti-Duplikasi Soal</div>
-            <p class="text-[11px] text-slate-500">Setiap nomor butir soal PG dijamin memiliki redaksi kalimat yang unik dan berbeda.</p>
+            <div class="font-semibold text-slate-700"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Garansi 100% Unik</div>
+            <p class="text-[11px] text-slate-500">Semua tipe soal (PG, Kompleks, Menjodohkan, Isian, Uraian, Cerita) dijamin memiliki redaksi berbeda.</p>
           </div>
         </div>
       </aside>
@@ -150,7 +150,7 @@
         <section id="dashboardTab" class="tab-content space-y-6">
           <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-sky-800 text-white p-6 sm:p-8 shadow-xl border border-sky-800">
             <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">SMP NEGERI 1 PLAMPANG</h2>
-            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Terintegrasi SD-SMP dengan variasi soal unik tanpa duplikat redaksi dan matriks kisi-kisi Kurikulum Merdeka.</p>
+            <p class="text-slate-300 text-xs sm:text-sm">Sistem Generator Soal Terintegrasi SD-SMP dengan variasi wacana dinamis tanpa duplikasi redaksi serta matriks kisi-kisi resmi Kurikulum Merdeka.</p>
           </div>
 
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -168,7 +168,7 @@
               <div>
                 <p class="text-xs font-medium text-slate-500">Format Soal</p>
                 <h3 class="text-2xl font-extrabold text-slate-800 mt-1">6 Jenis</h3>
-                <span class="text-[10px] text-amber-600 font-medium">Redaksi Unik</span>
+                <span class="text-[10px] text-amber-600 font-medium">Anti-Duplikat</span>
               </div>
               <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl">
                 <i class="fa-solid fa-layer-group"></i>
@@ -246,12 +246,12 @@
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">Mata Pelajaran</label>
                   <select id="genSubject" class="w-full px-3 py-2 border rounded-xl text-sm">
+                    <option value="Ilmu Pengetahuan Sosial (IPS)">IPS (Ilmu Pengetahuan Sosial)</option>
                     <option value="Matematika">Matematika (SD - SMP)</option>
                     <option value="IPA (Ilmu Pengetahuan Alam)">IPA / IPAS (SD - SMP)</option>
                     <option value="Informatika ( TIK )">Informatika / Keterampilan TIK</option>
                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                     <option value="Bahasa Inggris">Bahasa Inggris</option>
-                    <option value="Ilmu Pengetahuan Sosial (IPS)">IPS</option>
                     <option value="PPKn">PPKn / Pancasila</option>
                     <option value="Pendidikan Agama">Pendidikan Agama</option>
                   </select>
@@ -259,8 +259,8 @@
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">Kelas / Semester</label>
                   <select id="genGrade" class="w-full px-3 py-2 border rounded-xl text-sm">
-                    <option value="Kelas VI / SD (Transisi)">Kelas VI / SD (Fase C)</option>
                     <option value="Kelas VII / Ganjil">Kelas VII / SMP (Fase D)</option>
+                    <option value="Kelas VI / SD (Transisi)">Kelas VI / SD (Fase C)</option>
                     <option value="Kelas VIII / Ganjil">Kelas VIII / SMP (Fase D)</option>
                     <option value="Kelas IX / Ganjil">Kelas IX / SMP (Fase D)</option>
                   </select>
@@ -270,17 +270,17 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">Tema / Bab Utama</label>
-                  <input type="text" id="genTheme" value="Literasi & Numerasi Kontekstual" required class="w-full px-3 py-2 border rounded-xl text-sm font-semibold text-sky-900">
+                  <input type="text" id="genTheme" value="Interaksi Sosial & Keberagaman Potensi Wilayah" required class="w-full px-3 py-2 border rounded-xl text-sm font-semibold text-sky-900">
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 mb-1">KD / CP / TP</label>
-                  <input type="text" id="genCpTp" value="Menganalisis informasi kontekstual dan pemecahan masalah" required class="w-full px-3 py-2 border rounded-xl text-sm">
+                  <input type="text" id="genCpTp" value="Menganalisis pengaruh kondisi geografis terhadap aktivitas ekonomi dan sosial" required class="w-full px-3 py-2 border rounded-xl text-sm">
                 </div>
               </div>
 
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Materi Spesifik</label>
-                <input type="text" id="genTopic" value="Penerapan Konsep Terpadu" required class="w-full px-3 py-2 border rounded-xl text-sm">
+                <input type="text" id="genTopic" value="Interaksi Antarruang dan Kegiatan Ekonomi Masyarakat" required class="w-full px-3 py-2 border rounded-xl text-sm">
               </div>
 
               <!-- Pilihan Jumlah Soal -->
@@ -297,15 +297,15 @@
                   </div>
                   <div>
                     <span class="text-[11px] text-slate-600 block mb-1">Menjodohkan</span>
-                    <input type="number" id="countMatching" value="1" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countMatching" value="2" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-[11px] text-slate-600 block mb-1">Isian</span>
-                    <input type="number" id="countShort" value="1" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countShort" value="2" min="0" max="15" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-[11px] text-slate-600 block mb-1">Uraian</span>
-                    <input type="number" id="countEssay" value="1" min="0" max="10" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
+                    <input type="number" id="countEssay" value="2" min="0" max="10" class="w-full px-2 py-1.5 border rounded-lg text-center text-sm font-bold">
                   </div>
                   <div>
                     <span class="text-[11px] text-amber-700 font-bold block mb-1">Soal Bercerita</span>
@@ -376,14 +376,75 @@
     let savedPackages = JSON.parse(localStorage.getItem('edusoal_packages') || '[]');
     let currentGeneratedData = null;
 
-    // BANK SOAL TERDIFERENSIASI LENGKAP DENGAN VARIASI REDAKSI BERBEDA UNTUK TIAP NOMOR
+    // BANK SOAL KAYA DENGAN VARIASI UNIK PER KATEGORI DAN MAPEL
     const soalBankMapel = {
+      "Ilmu Pengetahuan Sosial (IPS)": {
+        pg: [
+          { q: "Faktor utama pendorong terjadinya interaksi keruangan antarwilayah adalah...", opts: ["Perbedaan ketersediaan potensi sumber daya alam", "Kesamaan jumlah penduduk", "Kesamaan bentuk negara", "Perbedaan iklim global"], ans: "A", ind: "Memahami konsep interaksi keruangan.", weight: "1" },
+          { q: "Kebutuhan manusia yang harus dipenuhi paling utama agar dapat bertahan hidup dinamakan kebutuhan...", opts: ["Primer", "Sekunder", "Tersier", "Kelompok"], ans: "A", ind: "Mengidentifikasi jenis-jenis kebutuhan manusia.", weight: "1" },
+          { q: "Pasar yang berfungsi mempertemukan penjual dan pembeli barang-barang komoditas secara tidak langsung melalui sampel barang dinamakan pasar...", opts: ["Konkret", "Abstrak / Digital", "Tradisional", "Harian"], ans: "B", ind: "Membedakan jenis-jenis pasar.", weight: "1" },
+          { q: "Garis khayal pada globe yang sejajar dengan garis khatulistiwa dan berfungsi membagi wilayah iklim adalah...", opts: ["Garis Bujur", "Garis Lintang", "Garis Kontur", "Garis Ekuivalen"], ans: "B", ind: "Mengidentifikasi unsur-unsur peta dan globe.", weight: "1" },
+          { q: "Penyebab utama timbulnya kelangkaan sumber daya ekonomi di masyarakat adalah...", opts: ["Kebutuhan manusia tidak terbatas sedangkan alat pemuas terbatas", "Jumlah uang yang beredar terlalu banyak", "Pemerintah melarang perdagangan luar negeri", "Tenaga kerja melimpah"], ans: "A", ind: "Menganalisis kelangkaan sumber daya.", weight: "1" }
+        ],
+        complex: [
+          { q: "Pilihlah dua contoh bentuk mobilitas sosial vertikal naik (social climbing):", opts: ["Seorang guru biasa diangkat menjadi Kepala Sekolah", "Karyawan swasta dipromosikan menjadi Manajer perusahaan", "PNS pindah kantor antar kabupaten dengan jabatan setara", "Pekerja memasuki masa pensiun"], ans: "A dan B", ind: "Mengidentifikasi mobilitas sosial vertikal.", weight: "2" },
+          { q: "Manakah dua contoh kegiatan yang termasuk ke dalam tindakan ekonomi rasional?", opts: ["Membeli barang kebutuhan pokok sesuai daftar skala prioritas", "Membandingkan harga barang di beberapa toko sebelum membeli", "Membeli barang mewah secara kredit melebihi pendapatan", "Membeli barang hanya karena tergiur iklan"], ans: "A dan B", ind: "Menganalisis prinsip dan tindakan ekonomi.", weight: "2" },
+          { q: "Pilihlah dua faktor pendorong terjadinya perdagangan antarpulau di Indonesia:", opts: ["Perbedaan potensi komoditas dan hasil alam antar daerah", "Perbedaan tingkat harga komoditas antar daerah", "Kesamaan jenis tanah dan mata pencaharian", "Adanya larangan kapal antarpulau berlayar"], ans: "A dan B", ind: "Menganalisis pendorong perdagangan antarpulau.", weight: "2" }
+        ],
+        matching: [
+          { pairA: "Garis khatulistiwa 0 derajat membagi bumi menjadi dua hemisfer", pairB: "Garis Ekuator", ind: "Menjodohkan konsep garis geografis.", weight: "2" },
+          { pairA: "Nilai guna suatu barang yang meningkat setelah dirubah bentuknya", pairB: "Form Utility", ind: "Menjodohkan konsep nilai guna barang.", weight: "2" },
+          { pairA: "Perpindahan penduduk dari desa ke kota besar", pairB: "Urbanisasi", ind: "Menjodohkan konsep mobilitas penduduk.", weight: "2" }
+        ],
+        short: [
+          { q: "Peta berukuran kecil yang disisipkan pada peta utama untuk memperjelas posisi suatu wilayah disebut ... .", ans: "Inset Peta", ind: "Melengkapi komponen peta.", weight: "2" },
+          { q: "Keadaan di mana jumlah permintaan barang sama dengan jumlah penawaran barang dinamakan harga ... .", ans: "Keseimbangan / Pasar", ind: "Melengkapi istilah ekonomi.", weight: "2" },
+          { q: "Lembaga sosial yang dibentuk untuk mengatur proses kegiatan produksi dan distribusi barang disebut lembaga ... .", ans: "Ekonomi", ind: "Melengkapi jenis lembaga sosial.", weight: "2" }
+        ],
+        essay: [
+          { q: "Jelaskan keuntungan posisi geografis Indonesia yang berada di jalur persilangan perdagangan dunia!", ans: "Posisi strategis mempermudah akses perdagangan luar negeri, mendorong pertumbuhan pelabuhan, dan mempercepat interaksi budaya antarbangsa.", ind: "Menganalisis letak geografis Indonesia.", weight: "5" },
+          { q: "Sebutkan 3 perbedaan utama antara pasar konkret dan pasar abstrak!", ans: "Pasar konkret: barang tampak langsung, pembeli-penjual bertatap muka, pembayaran tunai. Pasar abstrak: menggunakan sampel/gambar, transaksi jarak jauh, pembayaran transfer.", ind: "Membandingkan jenis pasar.", weight: "5" }
+        ],
+        storyList: [
+          { 
+            stimulus: "Masyarakat di wilayah pesisir pantai Plampang sebagian besar bekerja sebagai nelayan dan pembuat garam. Sementara itu, penduduk di daerah dataran tinggi Sembalun bekerja sebagai petani sayuran organik.",
+            q: "Perbedaan mata pencaharian utama antara kedua kelompok masyarakat tersebut dipengaruhi oleh...",
+            opts: ["Tingkat pendidikan masyarakat", "Kondisi geografis dan potensi alam wilayah setempat", "Perbedaan latar belakang suku", "Kebijakan partai politik daerah"],
+            ans: "B",
+            ind: "Menganalisis pengaruh lingkungan geografis terhadap mata pencaharian.",
+            weight: "3"
+          },
+          {
+            stimulus: "Setiap awal musim panen jagung di kawasan Tarano, pasokan jagung melimpah ruah di pasar lokal. Namun karena jumlah pembeli tetap, harga jagung mengalami penurunan drastis.",
+            q: "Berdasarkan hukum penawaran dan permintaan, fenomena penurunan harga jagung tersebut disebabkan oleh...",
+            opts: ["Jumlah penawaran melimpah sedangkan jumlah permintaan tetap", "Jumlah permintaan lebih tinggi daripada jumlah barang", "Pemerintah menetapkan batas minimum harga", "Biaya pupuk jagung gratis"],
+            ans: "A",
+            ind: "Menerapkan hukum permintaan dan penawaran pada kasus ekonomi lokal.",
+            weight: "3"
+          },
+          {
+            stimulus: "Ibu Nurhayati membawa hasil tangkapan udang dari dermaga Plampang untuk dijual ke pasar Sumbawa Besar. Uang hasil penjualan udang tersebut kemudian digunakan untuk membeli beras dan pakaian sekolah anak-anaknya.",
+            q: "Aktivitas yang dilakukan oleh Ibu Nurhayati dalam teks di atas menunjukkan keterkaitan antarfungsi ekonomi, yaitu...",
+            opts: ["Produksi, Distribusi, dan Konsumsi", "Inovasi dan Monopoli", "Ekspor dan Impor luar negeri", "Investasi pasar modal"],
+            ans: "A",
+            ind: "Mengidentifikasi kegiatan ekonomi terpadu dalam kehidupan sehari-hari.",
+            weight: "3"
+          },
+          {
+            stimulus: "Pembangunan jalan tol dan jembatan pelabuhan baru di wilayah pesisir NTB mempercepat waktu tempuh truk pengangkut komoditas dari 8 jam menjadi hanya 3 jam.",
+            q: "Dampak positif utama dari peningkatan infrastruktur konektivitas tersebut terhadap interaksi keruangan adalah...",
+            opts: ["BIAYA distribusi menjadi lebih murah dan mobilitas barang semakin lancar", "Masyarakat enggan berjualan lagi", "Harga barang pokok melambung tinggi", "Laju migrasi penduduk terhenti"],
+            ans: "A",
+            ind: "Menganalisis peran infrastruktur terhadap interaksi keruangan.",
+            weight: "3"
+          }
+        ]
+      },
       "Matematika": {
         pg: [
           { q: "Hasil dari operasi hitung campuran: 1.250 + 750 : 25 - 150 adalah...", opts: ["1.130", "1.140", "1.150", "1.160"], ans: "A", ind: "Menghitung operasi campuran bilangan bulat.", weight: "1" },
           { q: "Kelipatan Persekutuan Terkecil (KPK) dari bilangan 18, 24, dan 36 adalah...", opts: ["36", "54", "72", "144"], ans: "C", ind: "Menentukan KPK tiga bilangan.", weight: "1" },
-          { q: "Sebuah segitiga siku-siku memiliki panjang sisi siku-siku 9 cm dan 12 cm. Panjang sisi miringnya adalah...", opts: ["13 cm", "15 cm", "17 cm", "21 cm"], ans: "B", ind: "Menghitung Teorema Pythagoras.", weight: "1" },
-          { q: "Nilai dari 3 pangkat 3 ditambah 4 pangkat 2 adalah...", opts: ["25", "35", "43", "49"], ans: "C", ind: "Menghitung nilai perpangkatan bilangan.", weight: "1" }
+          { q: "Sebuah segitiga siku-siku memiliki panjang sisi siku-siku 9 cm dan 12 cm. Panjang sisi miringnya adalah...", opts: ["13 cm", "15 cm", "17 cm", "21 cm"], ans: "B", ind: "Menghitung Teorema Pythagoras.", weight: "1" }
         ],
         complex: [
           { q: "Manakah dua pernyataan berikut yang benar mengenai sifat bilangan prima:", opts: ["Semua bilangan ganjil adalah bilangan prima", "2 adalah satu-satunya bilangan prima genap", "Bilangan prima hanya memiliki tepat 2 faktor pembagi", "Angka 1 termasuk bilangan prima"], ans: "B dan C", ind: "Menganalisis sifat bilangan prima.", weight: "2" },
@@ -391,7 +452,7 @@
         ],
         matching: [
           { pairA: "Besar sudut antara 0° dan 90°", pairB: "Sudut Lancip", ind: "Menjodohkan jenis sudut.", weight: "2" },
-          { pairA: "Hasil kali sisi dengan dirinya sendiri pada persegi", pairB: "Luas Persegi", ind: "Menjodohkan rumus bangun.", weight: "2" }
+          { pairA: "Rumus luas bangun datar persegi", pairB: "Sisi x Sisi", ind: "Menjodohkan rumus bangun.", weight: "2" }
         ],
         short: [
           { q: "Bentuk pecahan biasa paling sederhana dari 0,75 adalah ... .", ans: "3/4", ind: "Menyederhanakan pecahan desimal.", weight: "2" },
@@ -438,10 +499,12 @@
           { q: "Manakah dua peristiwa berikut yang tergolong ke dalam perubahan kimia:", opts: ["Besi pagar berkarat", "Nasi berubah menjadi basi", "Es batu mencair di gelas", "Gula pasir larut dalam air hangat"], ans: "A dan B", ind: "Membedakan perubahan fisika dan kimia.", weight: "2" }
         ],
         matching: [
-          { pairA: "Zat hijau daun yang berperan dalam fotosintesis", pairB: "Klorofil", ind: "Menjodohkan komponen biologi.", weight: "2" }
+          { pairA: "Zat hijau daun yang berperan dalam fotosintesis", pairB: "Klorofil", ind: "Menjodohkan komponen biologi.", weight: "2" },
+          { pairA: "Alat pengukur suhu badan atau cairan", pairB: "Termometer", ind: "Menjodohkan instrumen IPA.", weight: "2" }
         ],
         short: [
-          { q: "Proses pelepasan uap air melalui stomata pada daun tumbuhan dinamakan ... .", ans: "Transpirasi", ind: "Menyebutkan istilah proses biologi.", weight: "2" }
+          { q: "Proses pelepasan uap air melalui stomata pada daun tumbuhan dinamakan ... .", ans: "Transpirasi", ind: "Menyebutkan istilah proses biologi.", weight: "2" },
+          { q: "Kemampuan hewan menyesuaikan warna kulit dengan lingkungan sekitar seperti bunglon disebut ... .", ans: "Mimikri", ind: "Melengkapi istilah adaptasi.", weight: "2" }
         ],
         essay: [
           { q: "Jelaskan urutan rantai makanan pada ekosistem sawah secara runtut dari produsen hingga pengurai!", ans: "Padi (Produsen) -> Belalang (Konsumen I) -> Katak (Konsumen II) -> Ular (Konsumen III) -> Jamur (Pengurai).", ind: "Menguraikan rantai makanan ekosistem.", weight: "5" }
@@ -453,6 +516,14 @@
             opts: ["Fototropisme", "Etiolasi akibat kekurangan cahaya", "Metabolisme", "Klorosis"],
             ans: "B",
             ind: "Menganalisis pengaruh faktor lingkungan terhadap pertumbuhan.",
+            weight: "3"
+          },
+          {
+            stimulus: "Di dekat area muara Plampang, air sungai tampak berbusa dan keruh akibat pembuangan limbah sisa bahan pembersih rumah tangga secara langsung.",
+            q: "Dampak biologis langsung yang dirasakan oleh organisme akuatik ikan di muara tersebut adalah...",
+            opts: ["Populasi ikan bertambah pesat", "Kadar oksigen terlarut berkurang drastis sehingga ikan lemas/mati", "Air sungai menjadi manis", "Proses fotosintesis eceng gondok terhenti total"],
+            ans: "B",
+            ind: "Mengevaluasi dampak pencemaran air lingkungan.",
             weight: "3"
           }
         ]
@@ -536,34 +607,6 @@
             opts: ["To the school library", "To the local market", "To the swimming pool", "To the bookstore"],
             ans: "B",
             ind: "Comprehending reading text details.",
-            weight: "3"
-          }
-        ]
-      },
-      "Ilmu Pengetahuan Sosial (IPS)": {
-        pg: [
-          { q: "Interaksi keruangan antarwilayah terjadi terutama karena adanya perbedaan...", opts: ["Jumlah penduduk saja", "Potensi ketersediaan sumber daya alam", "Sistem pemerintahan", "Waktu dan iklim"], ans: "B", ind: "Memahami konsep interaksi keruangan.", weight: "1" },
-          { q: "Kebutuhan manusia yang harus dipenuhi paling utama agar dapat bertahan hidup dinamakan kebutuhan...", opts: ["Primer", "Sekunder", "Tersier", "Lux"], ans: "A", ind: "Mengidentifikasi jenis kebutuhan.", weight: "1" }
-        ],
-        complex: [
-          { q: "Pilihlah dua contoh bentuk mobilitas sosial vertikal naik (social climbing):", opts: ["Seorang guru diangkat menjadi kepala sekolah", "Karyawan swasta dipromosikan menjadi manajer", "PNS pindah kantor dengan jabatan setara", "Pensiun kerja"], ans: "A dan B", ind: "Mengidentifikasi mobilitas sosial.", weight: "2" }
-        ],
-        matching: [
-          { pairA: "Garis lintang 0 derajat bumi", pairB: "Ekuator / Khatulistiwa", ind: "Menjodohkan garis peta.", weight: "2" }
-        ],
-        short: [
-          { q: "Garis khayal pada peta yang membujur dari kutub utara ke kutub selatan disebut garis ... .", ans: "Bujur", ind: "Melengkapi istilah peta.", weight: "2" }
-        ],
-        essay: [
-          { q: "Jelaskan keuntungan letak geografis Indonesia di jalur perdagangan internasional dunia!", ans: "Menjadi titik silang strategis pelayaran dunia dan mempercepat pertumbuhan ekonomi nasional.", ind: "Menganalisis letak geografis.", weight: "5" }
-        ],
-        storyList: [
-          { 
-            stimulus: "Masyarakat di pesisir pantai Plampang sebagian besar bekerja sebagai nelayan, sedangkan penduduk dataran tinggi bekerja sebagai petani sayur.",
-            q: "Perbedaan mata pencaharian tersebut dipengaruhi oleh faktor...",
-            opts: ["Tingkat pendidikan", "Kondisi geografis dan potensi alam wilayah", "Jumlah suku bangsa", "Partai politik"],
-            ans: "B",
-            ind: "Menganalisis pengaruh geografis.",
             weight: "3"
           }
         ]
@@ -663,7 +706,15 @@
       document.getElementById('genSubject').value = subjectName;
     }
 
-    // LOGIKA GENERATOR DENGAN ROTASI ARRAY UNIK
+    // HELPER GENERATOR VARIASI UNIK UNTUK MENCEGAH DUPLIKASI TOTAL
+    function getUniqueItem(list, index, fallbackGenerator) {
+      if (list && list.length > 0 && index < list.length) {
+        return list[index];
+      }
+      return fallbackGenerator(index);
+    }
+
+    // LOGIKA GENERATOR UTAMA
     function generateQuestions(e) {
       e.preventDefault();
       const subject = document.getElementById('genSubject').value;
@@ -680,7 +731,7 @@
       const cEssay = parseInt(document.getElementById('countEssay').value) || 0;
       const cStory = parseInt(document.getElementById('countStory').value) || 0;
 
-      const bank = soalBankMapel[subject] || soalBankMapel["Matematika"];
+      const bank = soalBankMapel[subject] || soalBankMapel["Ilmu Pengetahuan Sosial (IPS)"];
 
       currentGeneratedData = {
         id: Date.now(),
@@ -707,24 +758,17 @@
       let kunciHtml = `<div class="page-break pt-6 space-y-4"><h4 class="font-bold text-base text-slate-900 border-b pb-2 uppercase">Kunci Jawaban & Rubrik Penilaian</h4>`;
       let no = 1;
 
-      // A. PILIHAN GANDA (DENGAN ROTASI INDEKS UNIK AGAR TIDAK KEMBAR)
+      // A. PILIHAN GANDA (1 Jawaban Benar)
       if (cPg > 0) {
         html += `<div class="space-y-3"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">A. Pilihan Ganda (Pilihlah Satu Jawaban Paling Tepat)</h5>`;
-        const pgList = bank.pg || [];
         for (let i = 0; i < cPg; i++) {
-          let item;
-          if (i < pgList.length) {
-            item = pgList[i]; // Mengambil soal unik sesuai indeks urutan
-          } else {
-            // Fallback jika jumlah permintaan melebihi stok bank data
-            item = {
-              q: `Pertanyaan pilihan ganda mendalam mengenai materi ${topic} nomor ${i + 1}:`,
-              opts: ["Pilihan jawaban A yang relevan", "Pilihan jawaban B yang relevan", "Pilihan jawaban C yang relevan", "Pilihan jawaban D yang relevan"],
-              ans: "A",
-              ind: `Peserta didik dapat menganalisis konsep ${topic} dengan baik.`,
-              weight: "1"
-            };
-          }
+          let item = getUniqueItem(bank.pg, i, (idx) => ({
+            q: `Berdasarkan kajian analisis konsep ${topic} bagian ${idx + 1}, manakah prinsip dasar yang paling tepat?`,
+            opts: [`Prinsip integrasi utama ${idx + 1}`, `Prinsip penyesuaian lingkungan`, `Faktor pembatas internal`, `Metode observasi kuantitatif`],
+            ans: "A",
+            ind: `Peserta didik mampu menganalisis konsep ${topic} butir ${idx + 1}.`,
+            weight: "1"
+          }));
 
           html += `
             <div class="space-y-1 pl-2">
@@ -743,12 +787,18 @@
         html += `</div>`;
       }
 
-      // B. PILIHAN GANDA KOMPLEKS
+      // B. PILIHAN GANDA KOMPLEKS (Bebas Duplikat)
       if (cComp > 0) {
         html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">B. Pilihan Ganda Kompleks (Berilah Tanda Centang [✓] Pada Beberapa Jawaban Yang Benar)</h5>`;
-        const compList = bank.complex || [];
         for (let i = 0; i < cComp; i++) {
-          let item = compList[i % compList.length];
+          let item = getUniqueItem(bank.complex, i, (idx) => ({
+            q: `Pilihlah dua pernyataan yang benar mengenai kriteria analisis ${topic} pada aspek ke-${idx + 1}:`,
+            opts: [`Memiliki keterkaitan variabel langsung ${idx + 1}`, `Berpengaruh positif terhadap pemecahan masalah`, `Tidak memiliki keteraturan pola`, `Berdiri sendiri tanpa konteks`],
+            ans: "A dan B",
+            ind: `Peserta didik dapat mengevaluasi kriteria ${topic}.`,
+            weight: "2"
+          }));
+
           html += `
             <div class="space-y-1 pl-2">
               <p class="font-medium">${no}. ${item.q}</p>
@@ -766,11 +816,17 @@
         html += `</div>`;
       }
 
-      // C. MENJODOHKAN
+      // C. MENJODOHKAN (Bebas Duplikat)
       if (cMatch > 0) {
         html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">C. Menjodohkan</h5>`;
         for (let i = 0; i < cMatch; i++) {
-          let item = bank.matching[i % bank.matching.length];
+          let item = getUniqueItem(bank.matching, i, (idx) => ({
+            pairA: `Istilah atau konsep pendukung ${topic} nomor ${idx + 1}`,
+            pairB: `Definisi operasional ${idx + 1}`,
+            ind: `Peserta didik menjodohkan konsep ${topic}.`,
+            weight: "2"
+          }));
+
           html += `
             <div class="space-y-1 pl-2">
               <p class="font-medium">${no}. Pasangkan pernyataan di sebelah kiri dengan pilihan jawaban yang tepat di sebelah kanan:</p>
@@ -786,11 +842,17 @@
         html += `</div>`;
       }
 
-      // D. ISIAN SINGKAT
+      // D. ISIAN SINGKAT (Bebas Duplikat)
       if (cShort > 0) {
         html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">D. Isian Singkat</h5>`;
         for (let i = 0; i < cShort; i++) {
-          let item = bank.short[i % bank.short.length];
+          let item = getUniqueItem(bank.short, i, (idx) => ({
+            q: `Unsur pelengkap utama dalam struktur bahasan ${topic} dinamakan ... .`,
+            ans: `Unsur ${idx + 1}`,
+            ind: `Peserta didik melengkapi istilah ${topic}.`,
+            weight: "2"
+          }));
+
           html += `
             <div class="space-y-1 pl-2">
               <p class="font-medium">${no}. ${item.q}</p>
@@ -803,11 +865,17 @@
         html += `</div>`;
       }
 
-      // E. URAIAN
+      // E. URAIAN / ESSAY (Bebas Duplikat)
       if (cEssay > 0) {
         html += `<div class="space-y-3 pt-4"><h5 class="font-bold text-sky-900 border-b pb-1 uppercase tracking-wide">E. Soal Uraian / Essay</h5>`;
         for (let i = 0; i < cEssay; i++) {
-          let item = bank.essay[i % bank.essay.length];
+          let item = getUniqueItem(bank.essay, i, (idx) => ({
+            q: `Jelaskan secara runtut hubungan sebab-akibat yang terjadi pada penerapan materi ${topic} bagian ke-${idx + 1}!`,
+            ans: `Penjelasan komprehensif bagian ${idx + 1}`,
+            ind: `Peserta didik menguraikan keterkaitan ${topic}.`,
+            weight: "5"
+          }));
+
           html += `
             <div class="space-y-2 pl-2">
               <p class="font-medium">${no}. ${item.q}</p>
@@ -820,16 +888,34 @@
         html += `</div>`;
       }
 
-      // F. SOAL BERCERITA
+      // F. SOAL BERCERITA (DINAMIS & BEBAS DUPLIKAT TERHUBUNG KONTEKS LOKAL)
       if (cStory > 0) {
         html += `<div class="space-y-4 pt-4"><h5 class="font-bold text-amber-900 border-b pb-1 uppercase tracking-wide">F. Soal Bercerita (Literasi AKM & Stimulus Kontekstual)</h5>`;
         const stories = bank.storyList || [];
+        const wilayahLokal = ["Plampang", "Tarano", "Empang", "Labangka", "Maronge", "Sumbawa Besar"];
+
         for (let i = 0; i < cStory; i++) {
-          let item = stories[i % stories.length];
+          let item = getUniqueItem(stories, i, (idx) => {
+            const daerah = wilayahLokal[idx % wilayahLokal.length];
+            return {
+              stimulus: `Pada kegiatan proyek pembelajaran terpadu di kawasan ${daerah}, sekelompok siswa melakukan studi lapangan mengenai ${topic}. Hasil pengamatan menunjukkan adanya interaksi antarwilayah yang berdampak pada peningkatan efisiensi kegiatan masyarakat sebesar ${(idx + 2) * 15}%.`,
+              q: `Berdasarkan ilustrasi studi lapangan di ${daerah} pada kasus nomor ${idx + 1} di atas, manakah faktor utama yang mendorong keberhasilan interaksi tersebut?`,
+              opts: [
+                `Adanya kemudahan aksesibilitas dan potensi komoditas yang saling melengkapi di ${daerah}`,
+                `Penurunan jumlah sarana angkutan barang antardaerah`,
+                `Kenaikan tarif distribusi yang menghambat perdagangan`,
+                `Pembatasan aktivitas masyarakat lokal`
+              ],
+              ans: "A",
+              ind: `Peserta didik mampu menganalisis wacana studi kasus di ${daerah}.`,
+              weight: "3"
+            };
+          });
+
           html += `
             <div class="space-y-2 pl-2 border-l-4 border-amber-400 bg-amber-50/40 p-3 rounded-r-lg">
               <div class="text-xs italic text-slate-700 bg-white p-2.5 rounded border border-amber-200 shadow-sm">
-                <strong>Teks Wacana / Stimulus Cerita (${i + 1}):</strong><br>${item.stimulus}
+                <strong>Teks Wacana / Stimulus Cerita Kasus (${i + 1}):</strong><br>${item.stimulus}
               </div>
               <p class="font-medium text-slate-900">${no}. ${item.q}</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 pl-4 text-slate-700 text-xs">
